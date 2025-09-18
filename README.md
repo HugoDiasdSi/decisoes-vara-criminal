@@ -8,8 +8,6 @@ Claro, aqui está a versão do README sem os links, mantendo a estrutura e a lis
 
 Este repositório contém um acervo de decisões-modelo em **Markdown**, convertidas a partir de documentos originais, com o objetivo de servir de **base de estilo** e **templates de decisão**.
 
-As decisões estão organizadas na pasta [`decisoes/`](decisoes/).
-
 ---
 
 ## 📑 Índice de Decisões
