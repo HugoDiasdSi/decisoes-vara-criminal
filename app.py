@@ -155,9 +155,11 @@ class KnowledgeBaseManager:
 
     def load_style_models(self) -> str:
         """Carrega modelos de estilo de decisões da raiz do repositório"""
-        # Busca na raiz do repositório por arquivos .md (exceto README.md e base_conhecimento/)
-        root_dir = Path(".")
+        # Busca no diretório onde o app.py está localizado
+        root_dir = Path(__file__).parent
         content = ""
+
+        logger.info(f"Buscando modelos de decisão em: {root_dir.absolute()}")
 
         try:
             arquivos_carregados = 0
@@ -169,11 +171,13 @@ class KnowledgeBaseManager:
                 content += f"\n\n--- MODELO DE ESTILO: {file_path.name} ---\n\n"
                 content += file_path.read_text(encoding='utf-8')
                 arquivos_carregados += 1
+                logger.debug(f"Modelo carregado: {file_path.name}")
 
             if arquivos_carregados > 0:
-                logger.info(f"Modelos de estilo carregados: {arquivos_carregados} arquivos da raiz")
+                logger.info(f"✅ Modelos de estilo carregados: {arquivos_carregados} arquivos da raiz")
             else:
-                logger.warning("Nenhum modelo de estilo encontrado na raiz do repositório")
+                logger.warning(f"⚠️ Nenhum modelo de estilo encontrado em: {root_dir.absolute()}")
+                logger.warning(f"Arquivos .md encontrados: {list(root_dir.glob('*.md'))}")
 
         except Exception as e:
             logger.error(f"Erro ao carregar modelos de estilo: {e}")
