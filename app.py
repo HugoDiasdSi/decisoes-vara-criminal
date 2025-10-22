@@ -9,7 +9,6 @@ Para uso local, use app_refatorado.py
 import os
 import json
 import logging
-import time
 from pathlib import Path
 from typing import Dict, Optional, Tuple, Generator
 
@@ -283,38 +282,6 @@ class AssessorJuridicoApp:
 
         return prompt_parts
 
-    def _clean_markdown(self, text: str) -> str:
-        """Remove formatação markdown para texto puro pronto para copiar"""
-        import re
-
-        # Remove headers (###, ##, #)
-        text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
-
-        # Remove bold/italic (**texto**, *texto*)
-        text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
-        text = re.sub(r'\*([^*]+)\*', r'\1', text)
-
-        # Remove listas com marcadores (-, *, +)
-        text = re.sub(r'^\s*[-*+]\s+', '', text, flags=re.MULTILINE)
-
-        # Remove links markdown [texto](url)
-        text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
-
-        # Remove code blocks ```
-        text = re.sub(r'```[^\n]*\n', '', text)
-        text = re.sub(r'```', '', text)
-
-        # Remove inline code `code`
-        text = re.sub(r'`([^`]+)`', r'\1', text)
-
-        # Remove horizontal rules (---, ***)
-        text = re.sub(r'^[-*_]{3,}$', '', text, flags=re.MULTILINE)
-
-        # Remove linhas vazias múltiplas
-        text = re.sub(r'\n{3,}', '\n\n', text)
-
-        return text.strip()
-
     def _generate_with_pro(self, prompt_parts: list) -> Tuple[bool, str, str]:
         """Gera decisão/sentença com Gemini Pro"""
         try:
@@ -335,14 +302,10 @@ class AssessorJuridicoApp:
             if "### DOCUMENTOS FINAIS" in full_text:
                 parts = full_text.split("### DOCUMENTOS FINAIS", 1)
                 pensamento = parts[0].replace("### PENSAMENTO (CHAIN OF THOUGHT)", "").strip()
-                documentos_raw = parts[1].strip()
-
-                # Limpa markdown dos documentos para texto puro
-                documentos = self._clean_markdown(documentos_raw)
+                documentos = parts[1].strip()
             else:
-                documentos_raw = full_text
-                documentos = self._clean_markdown(full_text)
-                pensamento = "⚠️ Formato de saída não seguido corretamente."
+                documentos = f"AVISO: A IA não seguiu o formato de saída esperado.\n\n{full_text}"
+                pensamento = "Formato de saída não seguido corretamente."
                 logger.warning("IA não seguiu o formato de saída esperado")
 
             return True, pensamento, documentos
@@ -351,56 +314,36 @@ class AssessorJuridicoApp:
             logger.error(f"Erro na geração com Pro: {e}")
             return False, "", f"Erro na geração: {e}"
 
-    def _format_elapsed_time(self, seconds: int) -> str:
-        """Formata tempo decorrido em formato legível"""
-        if seconds < 60:
-            return f"{seconds}s"
-        minutes = seconds // 60
-        secs = seconds % 60
-        return f"{minutes}m {secs}s"
-
-    def _create_progress_message(self, stage: str, elapsed: int) -> str:
-        """Cria mensagem de progresso com spinner e tempo"""
-        spinner = "⏳"
-        return f"""
-{spinner} **{stage}**
-
-⏱️ Tempo decorrido: **{self._format_elapsed_time(elapsed)}**
-
-*Aguarde, estou trabalhando...*
-"""
-
     def analisar_processo(self, tipo_tarefa: str, pdf_file,
-                         texto_adicional: str) -> Generator[Tuple[str, str], None, None]:
+                         texto_adicional: str) -> Generator[Tuple[str, str, str], None, None]:
         """Função principal que orquestra a análise do processo"""
         if pdf_file is None and not (texto_adicional and texto_adicional.strip()):
-            yield ("**Erro de Entrada**\n\nPor favor, envie um PDF ou insira dados na caixa de texto para começar.", "")
+            yield ("Erro de Entrada",
+                   "Por favor, envie um PDF ou insira dados na caixa de texto para começar.",
+                   "")
             return
 
-        inicio_total = time.time()
-
-        yield ("⏳ **Iniciando análise...**\n\n⏱️ Tempo: 0s\n\nPreparando ambiente...", "")
+        yield ("Iniciando análise...", "Preparando ambiente...", "")
 
         relatorio_previo = ""
 
         if pdf_file is not None:
-            inicio_extracao = time.time()
-            yield ("📄 **PDF detectado**\n\n⏱️ Tempo: 0s\n\nExtraindo dados com Gemini Flash...", "")
+            yield ("PDF detectado", "Extraindo dados com Gemini Flash...", "")
 
             sucesso, resultado = self._extract_with_flash(pdf_file)
 
             if not sucesso:
-                yield (f"❌ **Erro na Extração**\n\n{resultado}", "")
+                yield ("Erro na Extração", resultado, "")
                 return
 
-            tempo_extracao = int(time.time() - inicio_extracao)
             relatorio_previo = resultado
             yield (
-                f"✅ **Extração concluída em {self._format_elapsed_time(tempo_extracao)}**\n\n**RELATÓRIO EXTRAÍDO:**\n\n---\n{relatorio_previo[:500]}...\n---\n\n⏳ Preparando para redação...",
+                f"Extração concluída\n\n**RELATÓRIO EXTRAÍDO:**\n---\n{relatorio_previo[:500]}...\n---",
+                "Aguardando redação com Gemini Pro...",
                 ""
             )
         else:
-            yield ("📝 **Modo texto detectado**\n\n⏱️ Tempo: 0s\n\nProcessando texto fornecido...", "")
+            yield ("Modo texto detectado", "Processando texto fornecido...", "")
             relatorio_previo = texto_adicional
 
         prompt_parts = self._build_prompt_for_pro(
@@ -409,51 +352,19 @@ class AssessorJuridicoApp:
             texto_adicional if pdf_file is not None else None
         )
 
-        inicio_geracao = time.time()
-        yield (self._create_progress_message("Gerando decisão/sentença com Gemini Pro", 0), "")
+        yield ("Gerando decisão/sentença", "Gemini Pro trabalhando...", "")
 
-        # Inicia geração em background e monitora progresso
-        import threading
-        resultado_geracao = {}
+        sucesso, pensamento, documentos = self._generate_with_pro(prompt_parts)
 
-        def gerar():
-            sucesso, pensamento, documentos = self._generate_with_pro(prompt_parts)
-            resultado_geracao['sucesso'] = sucesso
-            resultado_geracao['pensamento'] = pensamento
-            resultado_geracao['documentos'] = documentos
-
-        thread = threading.Thread(target=gerar)
-        thread.start()
-
-        # Atualiza progresso a cada 3 segundos
-        while thread.is_alive():
-            elapsed = int(time.time() - inicio_geracao)
-            yield (self._create_progress_message("Gerando decisão/sentença com Gemini Pro", elapsed), "")
-            thread.join(timeout=3)
-
-        # Pega resultado
-        if not resultado_geracao.get('sucesso', False):
-            yield (f"❌ **Erro na Geração**\n\n{resultado_geracao.get('documentos', 'Erro desconhecido')}", "")
+        if not sucesso:
+            yield ("Erro na Geração", documentos, "")
             return
 
-        tempo_total = int(time.time() - inicio_total)
-        tempo_geracao = int(time.time() - inicio_geracao)
-
-        pensamento_final = f"""✅ **Processamento concluído!**
-
-⏱️ **Tempo de geração:** {self._format_elapsed_time(tempo_geracao)}
-⏱️ **Tempo total:** {self._format_elapsed_time(tempo_total)}
-
----
-
-{resultado_geracao['pensamento']}
-"""
-
-        yield (pensamento_final, resultado_geracao['documentos'])
+        yield (pensamento, documentos, documentos)
 
     def limpar_interface(self) -> Tuple:
         """Limpa a interface do Gradio"""
-        return None, "", "Elaborar Minuta/Decisão", "", ""
+        return None, "", "Elaborar Minuta/Decisão", "", "", ""
 
     def criar_interface(self) -> gr.Blocks:
         """Cria e retorna a interface Gradio"""
@@ -475,7 +386,6 @@ class AssessorJuridicoApp:
             )
 
             with gr.Row():
-                # Coluna de inputs
                 with gr.Column(scale=1):
                     tipo_tarefa = gr.Radio(
                         ["Elaborar Minuta/Decisão", "Elaborar Sentença"],
@@ -496,47 +406,33 @@ class AssessorJuridicoApp:
                         btn_limpar = gr.Button("Limpar")
                         btn_analisar = gr.Button("Analisar Processo", variant="primary")
 
-                # Coluna de outputs - dividida em duas seções
                 with gr.Column(scale=2):
-                    # Seção 1: Chain of Thought e Relatório
-                    with gr.Group():
-                        gr.Markdown("### 🧠 Raciocínio da IA e Relatório Prévio")
-                        output_pensamento = gr.Markdown()
+                    gr.Markdown("### Raciocínio da IA (Chain of Thought)")
+                    output_pensamento = gr.Markdown()
 
-                    # Seção 2: Decisão Final com botão de copiar
-                    with gr.Group():
-                        with gr.Row():
-                            gr.Markdown("### ⚖️ Decisão Judicial Final")
-                            btn_copiar = gr.Button("📋 Copiar Decisão", scale=0, size="sm")
-
-                        output_decisao = gr.Textbox(
-                            label="",
-                            lines=20,
-                            max_lines=50,
-                            show_label=False,
-                            interactive=True,
-                            placeholder="A decisão aparecerá aqui após a análise..."
+                    with gr.Row():
+                        gr.Markdown("### Documentos Finais")
+                        copy_btn = gr.Textbox(
+                            label="📋 Copiar Texto (Ctrl+C)",
+                            lines=1,
+                            max_lines=1,
+                            interactive=False,
+                            visible=False
                         )
 
-            # Conectar botões
+                    output_documentos = gr.Markdown()
+
             btn_analisar.click(
                 fn=self.analisar_processo,
                 inputs=[tipo_tarefa, pdf_input, texto_adicional_input],
-                outputs=[output_pensamento, output_decisao]
-            )
-
-            btn_copiar.click(
-                fn=lambda x: x,
-                inputs=[output_decisao],
-                outputs=[],
-                js="(x) => {navigator.clipboard.writeText(x); alert('Decisão copiada para a área de transferência!');}"
+                outputs=[output_pensamento, output_documentos, copy_btn]
             )
 
             btn_limpar.click(
                 fn=self.limpar_interface,
                 inputs=None,
                 outputs=[pdf_input, texto_adicional_input, tipo_tarefa,
-                        output_pensamento, output_decisao],
+                        output_pensamento, output_documentos, copy_btn],
                 queue=False
             )
 
