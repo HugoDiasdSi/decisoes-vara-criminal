@@ -154,23 +154,27 @@ class KnowledgeBaseManager:
         return knowledge_files
 
     def load_style_models(self) -> str:
-        """Carrega modelos de estilo de decisões"""
-        modelos_dir = Path(self.config.get("paths", "modelos_estilo_dir", default="modelos_estilo"))
+        """Carrega modelos de estilo de decisões da raiz do repositório"""
+        # Busca na raiz do repositório por arquivos .md (exceto README.md e base_conhecimento/)
+        root_dir = Path(".")
         content = ""
 
-        if not modelos_dir.exists():
-            logger.warning(f"Diretório de modelos de estilo não encontrado: {modelos_dir}")
-            return ""
-
         try:
-            for file_path in modelos_dir.rglob("*.md"):
-                # Ignora arquivo de exemplo
-                if "EXEMPLO" in file_path.name:
+            arquivos_carregados = 0
+            for file_path in root_dir.glob("*.md"):
+                # Ignora README.md e arquivos de exemplo
+                if file_path.name == "README.md" or "EXEMPLO" in file_path.name.upper():
                     continue
+
                 content += f"\n\n--- MODELO DE ESTILO: {file_path.name} ---\n\n"
                 content += file_path.read_text(encoding='utf-8')
+                arquivos_carregados += 1
 
-            logger.info(f"Modelos de estilo carregados de {modelos_dir}")
+            if arquivos_carregados > 0:
+                logger.info(f"Modelos de estilo carregados: {arquivos_carregados} arquivos da raiz")
+            else:
+                logger.warning("Nenhum modelo de estilo encontrado na raiz do repositório")
+
         except Exception as e:
             logger.error(f"Erro ao carregar modelos de estilo: {e}")
 
