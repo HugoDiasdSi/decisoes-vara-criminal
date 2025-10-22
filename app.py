@@ -9,6 +9,7 @@ Para uso local, use app_refatorado.py
 import os
 import json
 import logging
+import time
 from pathlib import Path
 from typing import Dict, Optional, Tuple, Generator
 
@@ -314,6 +315,25 @@ class AssessorJuridicoApp:
             logger.error(f"Erro na geração com Pro: {e}")
             return False, "", f"Erro na geração: {e}"
 
+    def _format_elapsed_time(self, seconds: int) -> str:
+        """Formata tempo decorrido em formato legível"""
+        if seconds < 60:
+            return f"{seconds}s"
+        minutes = seconds // 60
+        secs = seconds % 60
+        return f"{minutes}m {secs}s"
+
+    def _create_progress_message(self, stage: str, elapsed: int) -> str:
+        """Cria mensagem de progresso com spinner e tempo"""
+        spinner = "⏳"
+        return f"""
+{spinner} **{stage}**
+
+⏱️ Tempo decorrido: **{self._format_elapsed_time(elapsed)}**
+
+*Aguarde, estou trabalhando...*
+"""
+
     def analisar_processo(self, tipo_tarefa: str, pdf_file,
                          texto_adicional: str) -> Generator[Tuple[str, str], None, None]:
         """Função principal que orquestra a análise do processo"""
@@ -321,12 +341,15 @@ class AssessorJuridicoApp:
             yield ("**Erro de Entrada**\n\nPor favor, envie um PDF ou insira dados na caixa de texto para começar.", "")
             return
 
-        yield ("⏳ **Iniciando análise...**\n\nPreparando ambiente...", "")
+        inicio_total = time.time()
+
+        yield ("⏳ **Iniciando análise...**\n\n⏱️ Tempo: 0s\n\nPreparando ambiente...", "")
 
         relatorio_previo = ""
 
         if pdf_file is not None:
-            yield ("📄 **PDF detectado**\n\nExtraindo dados com Gemini Flash...", "")
+            inicio_extracao = time.time()
+            yield ("📄 **PDF detectado**\n\n⏱️ Tempo: 0s\n\nExtraindo dados com Gemini Flash...", "")
 
             sucesso, resultado = self._extract_with_flash(pdf_file)
 
@@ -334,13 +357,14 @@ class AssessorJuridicoApp:
                 yield (f"❌ **Erro na Extração**\n\n{resultado}", "")
                 return
 
+            tempo_extracao = int(time.time() - inicio_extracao)
             relatorio_previo = resultado
             yield (
-                f"✅ **Extração concluída**\n\n**RELATÓRIO EXTRAÍDO:**\n\n---\n{relatorio_previo[:500]}...\n---\n\n⏳ Aguardando redação com Gemini Pro...",
+                f"✅ **Extração concluída em {self._format_elapsed_time(tempo_extracao)}**\n\n**RELATÓRIO EXTRAÍDO:**\n\n---\n{relatorio_previo[:500]}...\n---\n\n⏳ Preparando para redação...",
                 ""
             )
         else:
-            yield ("📝 **Modo texto detectado**\n\nProcessando texto fornecido...", "")
+            yield ("📝 **Modo texto detectado**\n\n⏱️ Tempo: 0s\n\nProcessando texto fornecido...", "")
             relatorio_previo = texto_adicional
 
         prompt_parts = self._build_prompt_for_pro(
@@ -349,15 +373,47 @@ class AssessorJuridicoApp:
             texto_adicional if pdf_file is not None else None
         )
 
-        yield ("🤖 **Gerando decisão/sentença**\n\nGemini Pro trabalhando...", "")
+        inicio_geracao = time.time()
+        yield (self._create_progress_message("Gerando decisão/sentença com Gemini Pro", 0), "")
 
-        sucesso, pensamento, documentos = self._generate_with_pro(prompt_parts)
+        # Inicia geração em background e monitora progresso
+        import threading
+        resultado_geracao = {}
 
-        if not sucesso:
-            yield (f"❌ **Erro na Geração**\n\n{documentos}", "")
+        def gerar():
+            sucesso, pensamento, documentos = self._generate_with_pro(prompt_parts)
+            resultado_geracao['sucesso'] = sucesso
+            resultado_geracao['pensamento'] = pensamento
+            resultado_geracao['documentos'] = documentos
+
+        thread = threading.Thread(target=gerar)
+        thread.start()
+
+        # Atualiza progresso a cada 3 segundos
+        while thread.is_alive():
+            elapsed = int(time.time() - inicio_geracao)
+            yield (self._create_progress_message("Gerando decisão/sentença com Gemini Pro", elapsed), "")
+            thread.join(timeout=3)
+
+        # Pega resultado
+        if not resultado_geracao.get('sucesso', False):
+            yield (f"❌ **Erro na Geração**\n\n{resultado_geracao.get('documentos', 'Erro desconhecido')}", "")
             return
 
-        yield (pensamento, documentos)
+        tempo_total = int(time.time() - inicio_total)
+        tempo_geracao = int(time.time() - inicio_geracao)
+
+        pensamento_final = f"""✅ **Processamento concluído!**
+
+⏱️ **Tempo de geração:** {self._format_elapsed_time(tempo_geracao)}
+⏱️ **Tempo total:** {self._format_elapsed_time(tempo_total)}
+
+---
+
+{resultado_geracao['pensamento']}
+"""
+
+        yield (pensamento_final, resultado_geracao['documentos'])
 
     def limpar_interface(self) -> Tuple:
         """Limpa a interface do Gradio"""
