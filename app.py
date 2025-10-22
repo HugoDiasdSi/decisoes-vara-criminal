@@ -283,6 +283,38 @@ class AssessorJuridicoApp:
 
         return prompt_parts
 
+    def _clean_markdown(self, text: str) -> str:
+        """Remove formatação markdown para texto puro pronto para copiar"""
+        import re
+
+        # Remove headers (###, ##, #)
+        text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+
+        # Remove bold/italic (**texto**, *texto*)
+        text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
+        text = re.sub(r'\*([^*]+)\*', r'\1', text)
+
+        # Remove listas com marcadores (-, *, +)
+        text = re.sub(r'^\s*[-*+]\s+', '', text, flags=re.MULTILINE)
+
+        # Remove links markdown [texto](url)
+        text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+
+        # Remove code blocks ```
+        text = re.sub(r'```[^\n]*\n', '', text)
+        text = re.sub(r'```', '', text)
+
+        # Remove inline code `code`
+        text = re.sub(r'`([^`]+)`', r'\1', text)
+
+        # Remove horizontal rules (---, ***)
+        text = re.sub(r'^[-*_]{3,}$', '', text, flags=re.MULTILINE)
+
+        # Remove linhas vazias múltiplas
+        text = re.sub(r'\n{3,}', '\n\n', text)
+
+        return text.strip()
+
     def _generate_with_pro(self, prompt_parts: list) -> Tuple[bool, str, str]:
         """Gera decisão/sentença com Gemini Pro"""
         try:
@@ -303,10 +335,14 @@ class AssessorJuridicoApp:
             if "### DOCUMENTOS FINAIS" in full_text:
                 parts = full_text.split("### DOCUMENTOS FINAIS", 1)
                 pensamento = parts[0].replace("### PENSAMENTO (CHAIN OF THOUGHT)", "").strip()
-                documentos = parts[1].strip()
+                documentos_raw = parts[1].strip()
+
+                # Limpa markdown dos documentos para texto puro
+                documentos = self._clean_markdown(documentos_raw)
             else:
-                documentos = f"AVISO: A IA não seguiu o formato de saída esperado.\n\n{full_text}"
-                pensamento = "Formato de saída não seguido corretamente."
+                documentos_raw = full_text
+                documentos = self._clean_markdown(full_text)
+                pensamento = "⚠️ Formato de saída não seguido corretamente."
                 logger.warning("IA não seguiu o formato de saída esperado")
 
             return True, pensamento, documentos
