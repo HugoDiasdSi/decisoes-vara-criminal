@@ -315,35 +315,32 @@ class AssessorJuridicoApp:
             return False, "", f"Erro na geração: {e}"
 
     def analisar_processo(self, tipo_tarefa: str, pdf_file,
-                         texto_adicional: str) -> Generator[Tuple[str, str, str], None, None]:
+                         texto_adicional: str) -> Generator[Tuple[str, str], None, None]:
         """Função principal que orquestra a análise do processo"""
         if pdf_file is None and not (texto_adicional and texto_adicional.strip()):
-            yield ("Erro de Entrada",
-                   "Por favor, envie um PDF ou insira dados na caixa de texto para começar.",
-                   "")
+            yield ("**Erro de Entrada**\n\nPor favor, envie um PDF ou insira dados na caixa de texto para começar.", "")
             return
 
-        yield ("Iniciando análise...", "Preparando ambiente...", "")
+        yield ("⏳ **Iniciando análise...**\n\nPreparando ambiente...", "")
 
         relatorio_previo = ""
 
         if pdf_file is not None:
-            yield ("PDF detectado", "Extraindo dados com Gemini Flash...", "")
+            yield ("📄 **PDF detectado**\n\nExtraindo dados com Gemini Flash...", "")
 
             sucesso, resultado = self._extract_with_flash(pdf_file)
 
             if not sucesso:
-                yield ("Erro na Extração", resultado, "")
+                yield (f"❌ **Erro na Extração**\n\n{resultado}", "")
                 return
 
             relatorio_previo = resultado
             yield (
-                f"Extração concluída\n\n**RELATÓRIO EXTRAÍDO:**\n---\n{relatorio_previo[:500]}...\n---",
-                "Aguardando redação com Gemini Pro...",
+                f"✅ **Extração concluída**\n\n**RELATÓRIO EXTRAÍDO:**\n\n---\n{relatorio_previo[:500]}...\n---\n\n⏳ Aguardando redação com Gemini Pro...",
                 ""
             )
         else:
-            yield ("Modo texto detectado", "Processando texto fornecido...", "")
+            yield ("📝 **Modo texto detectado**\n\nProcessando texto fornecido...", "")
             relatorio_previo = texto_adicional
 
         prompt_parts = self._build_prompt_for_pro(
@@ -352,19 +349,19 @@ class AssessorJuridicoApp:
             texto_adicional if pdf_file is not None else None
         )
 
-        yield ("Gerando decisão/sentença", "Gemini Pro trabalhando...", "")
+        yield ("🤖 **Gerando decisão/sentença**\n\nGemini Pro trabalhando...", "")
 
         sucesso, pensamento, documentos = self._generate_with_pro(prompt_parts)
 
         if not sucesso:
-            yield ("Erro na Geração", documentos, "")
+            yield (f"❌ **Erro na Geração**\n\n{documentos}", "")
             return
 
-        yield (pensamento, documentos, documentos)
+        yield (pensamento, documentos)
 
     def limpar_interface(self) -> Tuple:
         """Limpa a interface do Gradio"""
-        return None, "", "Elaborar Minuta/Decisão", "", "", ""
+        return None, "", "Elaborar Minuta/Decisão", "", ""
 
     def criar_interface(self) -> gr.Blocks:
         """Cria e retorna a interface Gradio"""
@@ -386,6 +383,7 @@ class AssessorJuridicoApp:
             )
 
             with gr.Row():
+                # Coluna de inputs
                 with gr.Column(scale=1):
                     tipo_tarefa = gr.Radio(
                         ["Elaborar Minuta/Decisão", "Elaborar Sentença"],
@@ -406,33 +404,47 @@ class AssessorJuridicoApp:
                         btn_limpar = gr.Button("Limpar")
                         btn_analisar = gr.Button("Analisar Processo", variant="primary")
 
+                # Coluna de outputs - dividida em duas seções
                 with gr.Column(scale=2):
-                    gr.Markdown("### Raciocínio da IA (Chain of Thought)")
-                    output_pensamento = gr.Markdown()
+                    # Seção 1: Chain of Thought e Relatório
+                    with gr.Group():
+                        gr.Markdown("### 🧠 Raciocínio da IA e Relatório Prévio")
+                        output_pensamento = gr.Markdown()
 
-                    with gr.Row():
-                        gr.Markdown("### Documentos Finais")
-                        copy_btn = gr.Textbox(
-                            label="📋 Copiar Texto (Ctrl+C)",
-                            lines=1,
-                            max_lines=1,
-                            interactive=False,
-                            visible=False
+                    # Seção 2: Decisão Final com botão de copiar
+                    with gr.Group():
+                        with gr.Row():
+                            gr.Markdown("### ⚖️ Decisão Judicial Final")
+                            btn_copiar = gr.Button("📋 Copiar Decisão", scale=0, size="sm")
+
+                        output_decisao = gr.Textbox(
+                            label="",
+                            lines=20,
+                            max_lines=50,
+                            show_label=False,
+                            interactive=True,
+                            placeholder="A decisão aparecerá aqui após a análise..."
                         )
 
-                    output_documentos = gr.Markdown()
-
+            # Conectar botões
             btn_analisar.click(
                 fn=self.analisar_processo,
                 inputs=[tipo_tarefa, pdf_input, texto_adicional_input],
-                outputs=[output_pensamento, output_documentos, copy_btn]
+                outputs=[output_pensamento, output_decisao]
+            )
+
+            btn_copiar.click(
+                fn=lambda x: x,
+                inputs=[output_decisao],
+                outputs=[],
+                js="(x) => {navigator.clipboard.writeText(x); alert('Decisão copiada para a área de transferência!');}"
             )
 
             btn_limpar.click(
                 fn=self.limpar_interface,
                 inputs=None,
                 outputs=[pdf_input, texto_adicional_input, tipo_tarefa,
-                        output_pensamento, output_documentos, copy_btn],
+                        output_pensamento, output_decisao],
                 queue=False
             )
 
