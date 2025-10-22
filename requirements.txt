@@ -1,0 +1,11 @@
+# Dependências do Assessor Jurídico Virtual
+
+# IA e ML
+google-generativeai>=0.3.0
+
+# Interface Web
+gradio>=4.0.0
+
+# Utilitários
+pathlib2>=2.3.7
+python-dotenv>=1.0.0
