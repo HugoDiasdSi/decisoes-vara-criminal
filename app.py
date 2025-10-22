@@ -232,33 +232,61 @@ class AssessorJuridicoApp:
 
     def _extract_with_flash(self, pdf_file) -> Tuple[bool, str]:
         """Extrai dados do PDF usando Gemini Flash"""
-        try:
-            prompt_extracao = self.prompt_manager.load_prompt("extracao_flash")
+        import time
 
-            with open(pdf_file.name, 'rb') as f:
-                pdf_bytes = f.read()
+        max_tentativas = 3
+        tentativa = 0
 
-            pdf_file_part = {"mime_type": "application/pdf", "data": pdf_bytes}
+        while tentativa < max_tentativas:
+            try:
+                tentativa += 1
+                if tentativa > 1:
+                    logger.warning(f"🔄 Tentativa {tentativa}/{max_tentativas} de extração...")
+                    time.sleep(2 ** (tentativa - 1))  # Backoff: 2s, 4s
 
-            flash_config = genai.GenerationConfig(
-                temperature=self.config.get("generation_config", "flash", "temperature", default=0.0)
-            )
+                prompt_extracao = self.prompt_manager.load_prompt("extracao_flash")
 
-            flash_model_name = self.config.get("models", "flash", default="models/gemini-flash-lite-latest")
-            flash_model = genai.GenerativeModel(flash_model_name)
+                with open(pdf_file.name, 'rb') as f:
+                    pdf_bytes = f.read()
 
-            logger.info("Iniciando extração com Gemini Flash...")
-            response = flash_model.generate_content(
-                [prompt_extracao, pdf_file_part],
-                generation_config=flash_config
-            )
+                pdf_file_part = {"mime_type": "application/pdf", "data": pdf_bytes}
 
-            logger.info("Extração com Flash concluída com sucesso")
-            return True, response.text
+                flash_config = genai.GenerationConfig(
+                    temperature=self.config.get("generation_config", "flash", "temperature", default=0.0)
+                )
 
-        except Exception as e:
-            logger.error(f"Erro na extração com Flash: {e}")
-            return False, f"Erro na extração: {e}"
+                flash_model_name = self.config.get("models", "flash", default="models/gemini-flash-lite-latest")
+                flash_model = genai.GenerativeModel(flash_model_name)
+
+                logger.info("Iniciando extração com Gemini Flash...")
+                response = flash_model.generate_content(
+                    [prompt_extracao, pdf_file_part],
+                    generation_config=flash_config
+                )
+
+                logger.info("✅ Extração com Flash concluída com sucesso")
+                return True, response.text
+
+            except Exception as e:
+                erro_msg = str(e)
+
+                # Verifica se é erro temporário (503, timeout, etc)
+                if ("503" in erro_msg or "Timeout" in erro_msg or "Illegal metadata" in erro_msg) and tentativa < max_tentativas:
+                    logger.warning(f"⚠️ Erro temporário na API do Gemini: {erro_msg}")
+                    logger.info(f"🔄 Tentando novamente em {2 ** tentativa}s...")
+                    continue
+
+                # Se não for temporário ou acabaram as tentativas
+                logger.error(f"❌ Erro na extração com Flash após {tentativa} tentativa(s): {e}")
+
+                if "503" in erro_msg:
+                    return False, "⚠️ Erro temporário da API do Gemini (503). Por favor, tente novamente em alguns segundos."
+                elif "Timeout" in erro_msg:
+                    return False, "⏱️ Timeout ao processar o PDF. Por favor, tente novamente."
+                else:
+                    return False, f"Erro na extração: {e}"
+
+        return False, "❌ Falha após múltiplas tentativas. Tente novamente em alguns minutos."
 
     def _build_prompt_for_pro(self, tipo_tarefa: str, relatorio_previo: str,
                              texto_adicional: Optional[str] = None) -> list:
@@ -319,35 +347,65 @@ class AssessorJuridicoApp:
 
     def _generate_with_pro(self, prompt_parts: list) -> Tuple[bool, str, str]:
         """Gera decisão/sentença com Gemini Pro"""
-        try:
-            pro_model_name = self.config.get("models", "pro", default="models/gemini-2.5-pro")
-            pro_model = genai.GenerativeModel(pro_model_name)
+        import time
 
-            timeout = self.config.get("generation_config", "pro", "timeout", default=600)
+        max_tentativas = 3
+        tentativa = 0
 
-            logger.info("Enviando para Gemini Pro...")
-            response = pro_model.generate_content(
-                prompt_parts,
-                request_options={"timeout": timeout}
-            )
+        while tentativa < max_tentativas:
+            try:
+                tentativa += 1
+                if tentativa > 1:
+                    logger.warning(f"🔄 Tentativa {tentativa}/{max_tentativas} de geração...")
+                    time.sleep(2 ** (tentativa - 1))  # Backoff: 2s, 4s
 
-            full_text = response.text
-            logger.info("Geração com Pro concluída com sucesso")
+                pro_model_name = self.config.get("models", "pro", default="models/gemini-2.5-pro")
+                pro_model = genai.GenerativeModel(pro_model_name)
 
-            if "### DOCUMENTOS FINAIS" in full_text:
-                parts = full_text.split("### DOCUMENTOS FINAIS", 1)
-                pensamento = parts[0].replace("### PENSAMENTO (CHAIN OF THOUGHT)", "").strip()
-                documentos = parts[1].strip()
-            else:
-                documentos = f"AVISO: A IA não seguiu o formato de saída esperado.\n\n{full_text}"
-                pensamento = "Formato de saída não seguido corretamente."
-                logger.warning("IA não seguiu o formato de saída esperado")
+                timeout = self.config.get("generation_config", "pro", "timeout", default=600)
 
-            return True, pensamento, documentos
+                logger.info("Enviando para Gemini Pro...")
+                response = pro_model.generate_content(
+                    prompt_parts,
+                    request_options={"timeout": timeout}
+                )
 
-        except Exception as e:
-            logger.error(f"Erro na geração com Pro: {e}")
-            return False, "", f"Erro na geração: {e}"
+                full_text = response.text
+                logger.info("✅ Geração com Pro concluída com sucesso")
+
+                if "### DOCUMENTOS FINAIS" in full_text:
+                    parts = full_text.split("### DOCUMENTOS FINAIS", 1)
+                    pensamento = parts[0].replace("### PENSAMENTO (CHAIN OF THOUGHT)", "").strip()
+                    documentos = parts[1].strip()
+                else:
+                    documentos = f"AVISO: A IA não seguiu o formato de saída esperado.\n\n{full_text}"
+                    pensamento = "Formato de saída não seguido corretamente."
+                    logger.warning("IA não seguiu o formato de saída esperado")
+
+                return True, pensamento, documentos
+
+            except Exception as e:
+                erro_msg = str(e)
+
+                # Verifica se é erro temporário
+                if ("503" in erro_msg or "Timeout" in erro_msg or "Illegal metadata" in erro_msg or "429" in erro_msg) and tentativa < max_tentativas:
+                    logger.warning(f"⚠️ Erro temporário na API do Gemini: {erro_msg}")
+                    logger.info(f"🔄 Tentando novamente em {2 ** tentativa}s...")
+                    continue
+
+                # Se não for temporário ou acabaram as tentativas
+                logger.error(f"❌ Erro na geração com Pro após {tentativa} tentativa(s): {e}")
+
+                if "503" in erro_msg:
+                    return False, "", "⚠️ Erro temporário da API do Gemini (503). Por favor, tente novamente."
+                elif "429" in erro_msg:
+                    return False, "", "⏱️ Limite de requisições atingido. Aguarde alguns segundos e tente novamente."
+                elif "Timeout" in erro_msg:
+                    return False, "", "⏱️ Timeout ao gerar decisão. Tente novamente."
+                else:
+                    return False, "", f"Erro na geração: {e}"
+
+        return False, "", "❌ Falha após múltiplas tentativas. Tente novamente em alguns minutos."
 
     def analisar_processo(self, tipo_tarefa: str, pdf_file,
                          texto_adicional: str) -> Generator[Tuple[str, str, str], None, None]:
