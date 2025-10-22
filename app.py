@@ -155,15 +155,31 @@ class KnowledgeBaseManager:
 
     def load_style_models(self) -> str:
         """Carrega modelos de estilo de decisões da raiz do repositório"""
-        # Busca no diretório onde o app.py está localizado
-        root_dir = Path(__file__).parent
-        content = ""
+        import os
 
-        logger.info(f"Buscando modelos de decisão em: {root_dir.absolute()}")
+        # Tenta encontrar o diretório decisoes-vara-criminal
+        # Prioridade:
+        # 1. Variável de ambiente DECISOES_DIR
+        # 2. /home/user/decisoes-vara-criminal
+        # 3. Diretório do app.py
+
+        decisoes_dir = os.environ.get('DECISOES_DIR')
+
+        if decisoes_dir and Path(decisoes_dir).exists():
+            root_dir = Path(decisoes_dir)
+        elif Path("/home/user/decisoes-vara-criminal").exists():
+            root_dir = Path("/home/user/decisoes-vara-criminal")
+        else:
+            root_dir = Path(__file__).parent
+
+        content = ""
+        logger.info(f"🔍 Buscando modelos de decisão em: {root_dir.absolute()}")
 
         try:
             arquivos_carregados = 0
-            for file_path in root_dir.glob("*.md"):
+            modelos_list = []
+
+            for file_path in sorted(root_dir.glob("*.md")):
                 # Ignora README.md e arquivos de exemplo
                 if file_path.name == "README.md" or "EXEMPLO" in file_path.name.upper():
                     continue
@@ -171,16 +187,18 @@ class KnowledgeBaseManager:
                 content += f"\n\n--- MODELO DE ESTILO: {file_path.name} ---\n\n"
                 content += file_path.read_text(encoding='utf-8')
                 arquivos_carregados += 1
-                logger.debug(f"Modelo carregado: {file_path.name}")
+                modelos_list.append(file_path.name)
 
             if arquivos_carregados > 0:
-                logger.info(f"✅ Modelos de estilo carregados: {arquivos_carregados} arquivos da raiz")
+                logger.info(f"✅ Modelos de estilo carregados: {arquivos_carregados} arquivos")
+                logger.info(f"📋 Primeiros modelos: {modelos_list[:5]}...")
             else:
-                logger.warning(f"⚠️ Nenhum modelo de estilo encontrado em: {root_dir.absolute()}")
-                logger.warning(f"Arquivos .md encontrados: {list(root_dir.glob('*.md'))}")
+                logger.error(f"❌ NENHUM modelo encontrado em: {root_dir.absolute()}")
+                todos_md = list(root_dir.glob('*.md'))
+                logger.error(f"Arquivos .md no diretório: {todos_md}")
 
         except Exception as e:
-            logger.error(f"Erro ao carregar modelos de estilo: {e}")
+            logger.error(f"❌ Erro ao carregar modelos de estilo: {e}")
 
         return content
 
@@ -268,10 +286,23 @@ class AssessorJuridicoApp:
 
             modelos_estilo = self.kb_manager.load_style_models()
 
+            # Log para debug
+            if modelos_estilo:
+                logger.info(f"📤 Enviando {len(modelos_estilo)} caracteres de modelos para a IA")
+                logger.info(f"📝 Primeiros 200 chars: {modelos_estilo[:200]}...")
+            else:
+                logger.error("❌ NENHUM modelo foi carregado para enviar à IA!")
+
             prompt_parts = [
                 prompt_principal,
-                "\n--- CONTEÚDO DOS MODELOS DE ESTILO ---\n",
-                modelos_estilo if modelos_estilo else "AVISO: Nenhum modelo de estilo encontrado.",
+                "\n\n========================================\n",
+                "ATENÇÃO: VOCÊ DEVE CONSULTAR E ESCOLHER UM MODELO ADEQUADO ABAIXO!\n",
+                "========================================\n\n",
+                "\n--- CONTEÚDO DOS MODELOS DE ESTILO (DECISÕES ANTERIORES) ---\n",
+                modelos_estilo if modelos_estilo else "❌ ERRO: Nenhum modelo de estilo encontrado.",
+                "\n\n========================================\n",
+                "INSTRUÇÕES: Escolha o modelo mais adequado acima e adapte ao caso!\n",
+                "========================================\n\n",
             ]
 
         prompt_parts.extend([
