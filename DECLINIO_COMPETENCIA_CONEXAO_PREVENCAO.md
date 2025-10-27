@@ -2,7 +2,7 @@
 
 ```json
 {
-  "filename": "DECLINIO_COMPETENCIA_CONEXAO_PREVENCAO.json",
+  "filename": "DECLINIO_COMPETENCIA_CONEXAO_PREVENCAO.md",
   "tags": [
     "declínio de competência",
     "conexão",
