@@ -1,4 +1,4 @@
-Com base na decisão fornecida, realizei a catalogação, identificando os blocos fixos e os condicionais, e aplicando todas as regras de formatação e estilo. O resultado está no formato JSON abaixo.
+
 
 ```json
 {
