@@ -1,6 +1,3 @@
-**[DECISÃO]{.underline}**
-
-Com base na decisão fornecida, realizei a catalogação, identificando as partes fixas e adaptáveis, e aplicando todas as regras de formatação e estilo. O resultado está no formato JSON abaixo.
 
 ```json
 {
