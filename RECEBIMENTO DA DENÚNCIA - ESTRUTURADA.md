@@ -1,6 +1,4 @@
-Você está correto. O formato que você enviou não é um JSON válido, pois consiste em dois objetos separados por uma vírgula, além de conter caracteres inválidos.
 
-Corrigi a sintaxe, unificando os metadados com a estrutura da decisão em um único objeto JSON válido. Também realizei ajustes no conteúdo para garantir a conformidade com as regras de formatação (como a remoção de listas alfabéticas) e a consistência do modelo.
 
 ```json
 {
