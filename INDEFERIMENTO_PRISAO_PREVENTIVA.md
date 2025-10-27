@@ -1,6 +1,4 @@
-Com base na decisão fornecida, realizei a catalogação, identificando as partes fixas e adaptáveis, e aplicando todas as regras de formatação e estilo, incluindo a substituição do nome do juiz e da localidade.
 
-O resultado está no formato JSON abaixo.
 
 ```json
 {
