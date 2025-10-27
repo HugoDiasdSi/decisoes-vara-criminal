@@ -1,4 +1,3 @@
-Com base no despacho fornecido, realizei a catalogação, identificando as partes fixas e adaptáveis e aplicando as regras de formatação. O resultado está no formato JSON abaixo.
 
 ```json
 {
