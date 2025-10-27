@@ -1,6 +1,4 @@
-Com base na decisão fornecida, realizei a catalogação, identificando os blocos fixos, adaptáveis e condicionais, e aplicando todas as regras de formatação e estilo. A estrutura reflete a complexa linha de raciocínio do magistrado: primeiro a desclassificação do crime e, em seguida, a rejeição da denúncia com base na atipicidade penal.
 
-O resultado está no formato JSON abaixo.
 
 ```json
 {
