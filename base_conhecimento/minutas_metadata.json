@@ -1,923 +1,782 @@
-
-
 [
   {
-    "filename": "decisão- receber resposta à acusação - preliminares - estupro de vulnerável - inépcia da denúncia + justa causa - rejeitar -designar audiência.md",
+    "filename": "nércia da Delegacia - Oficiar corregedoria SDS e MP - ílicito adminsitrativo e criminal - comprovante de depósito.md",
     "tags": [
-      "receber resposta acusação",
-      "decisão",
-      "preliminares",
-      "estupro vulnerável",
-      "inépcia denúncia",
-      "justa causa",
-      "designar audiência"
-    ],
-    "descricao": "Decisão que rejeita preliminares (inépcia, falta de justa causa) em estupro e designa audiência."
-  },
-  {
-    "filename": "0000112-70.2025.8.17.4810 - REJEIÇÃO DA DENÚNCIA -Ausência de Fundada Suspeita -  STJ.md",
-    "tags": [
-      "rejeição denúncia",
-      "decisão",
-      "ausência fundada suspeita",
-      "busca pessoal",
-      "ilicitude prova",
-      "art395cpp",
-      "tráfico drogas"
-    ],
-    "descricao": "Decisão de rejeição da denúncia por ausência de fundada suspeita na busca pessoal (tráfico)."
-  },
-  {
-    "filename": "0000980-82.2024.8.17.4810  - Decisão - revogação monitoramento eletrônico.md",
-    "tags": [
-      "revogação monitoramento",
-      "decisão",
-      "medida cautelar",
-      "monitoramento eletrônico",
-      "art282cpp",
-      "desproporcionalidade"
-    ],
-    "descricao": "Decisão que revoga a medida cautelar de monitoramento eletrônico."
-  },
-  {
-    "filename": "MODELO - declinar competência - vara de violência doméstica e familiar contra a mulher da capital - ex namorado.md",
-    "tags": [
-      "declinar competência",
-      "decisão",
-      "violência doméstica",
-      "lei maria da penha",
-      "incompetência",
-      "vara da mulher"
-    ],
-    "descricao": "Decisão declinando competência para Vara de Violência Doméstica (ex-namorado)."
-  },
-  {
-    "filename": "modelo simples -  rejeição preliminar resposta à acusação - absolvição sumária - rejeita prescrição - STJ dano qualificado concessionária empresa de onibus.md",
-    "tags": [
-      "rejeitar preliminar",
-      "decisão",
-      "resposta acusação",
-      "absolvição sumária",
-      "prescrição",
-      "dano qualificado",
-      "designar audiência"
-    ],
-    "descricao": "Decisão que rejeita prescrição e absolvição sumária em dano qualificado e designa audiência."
-  },
-  {
-    "filename": "decisão - indeferimento restituição de coisa apreendida -pedido já apreciado.md",
-    "tags": [
-      "indeferir restituição",
-      "decisão",
-      "restituição coisa apreendida",
-      "pedido repetido",
-      "perda de objeto",
-      "extinção sem mérito"
-    ],
-    "descricao": "Decisão indeferindo restituição de bem por perda de objeto (pedido já apreciado)."
-  },
-  {
-    "filename": "MODELO - réu sentenciado foragido - arquivar provisoriamente enquanto aguarda captura.md",
-    "tags": [
-      "arquivamento provisório",
-      "decisão",
-      "réu foragido",
-      "execução penal",
-      "aguardar captura",
-      "prescrição"
-    ],
-    "descricao": "Decisão determinando arquivamento provisório de execução por réu sentenciado foragido."
-  },
-  {
-    "filename": "MODELO - MPU medida de proteção - indeferimento.md",
-    "tags": [
-      "indeferir medida protetiva",
-      "sentença",
-      "criança e adolescente",
-      "medida de proteção",
-      "lei 13431",
-      "extinção com mérito"
-    ],
-    "descricao": "Sentença indeferindo pedido de medida protetiva (Lei 13.431/17)."
-  },
-  {
-    "filename": "modelos intimar advogado alegações finais - advertência - TED OAB.md",
-    "tags": [
-      "intimar alegações finais",
-      "despacho",
-      "intimação advogado",
-      "prazo",
-      "advertência oab",
-      "defensoria pública"
-    ],
-    "descricao": "Despacho intimando advogado para alegações finais com advertência à OAB."
-  },
-  {
-    "filename": "decisão liminar  - habeas corpus cultivo cannabis - produção de canadibiol e uso na forma vaporizada.md",
-    "tags": [
-      "habeas corpus",
-      "decisão liminar",
-      "salvo-conduto",
-      "cultivo cannabis",
-      "uso medicinal",
-      "atipicidade"
-    ],
-    "descricao": "Decisão liminar em HC concedendo salvo-conduto para cultivo de cannabis medicinal (óleo e vapor)."
-  },
-  {
-    "filename": "modelo simples -  rejeição preliminar resposta à acusação - absolvição sumária + receber defesa resposta à acusação - nega laudo toxicoloigco.md",
-    "tags": [
-      "rejeitar preliminar",
-      "decisão",
-      "resposta acusação",
-      "absolvição sumária",
-      "exame toxicológico",
-      "indeferimento",
-      "designar audiência"
-    ],
-    "descricao": "Decisão que indefere exame toxicológico, rejeita absolvição sumária e designa audiência."
-  },
-  {
-    "filename": "decisão - indefere pedido de exame toxicológico - aguardar audiência.md",
-    "tags": [
-      "indeferir exame toxicológico",
-      "decisão",
-      "resposta acusação",
-      "exame de insanidade",
-      "dúvida razoável",
-      "aguardar audiência"
-    ],
-    "descricao": "Decisão que indefere pedido de exame toxicológico por ausência de dúvida razoável."
-  },
-  {
-    "filename": "ARQUIVAMENTO IP inércia MP- Proc nº 12-79.2018.md",
-    "tags": [
-      "arquivamento ip",
-      "decisão",
-      "inquérito policial",
-      "inércia ministério público",
-      "tramitação direta",
-      "controle externo"
-    ],
-    "descricao": "Decisão determinando arquivamento de IP por inércia do Ministério Público."
-  },
-  {
-    "filename": "0000020-22.2016.8.17.0150 - demembramento - correu em local incerto e não sabido.md",
-    "tags": [
-      "desmembramento processo",
-      "decisão",
-      "corréu não localizado",
-      "citação por edital",
-      "art80cpp",
-      "designar audiência"
-    ],
-    "descricao": "Decisão determinando desmembramento do feito quanto a corréu citado por edital."
-  },
-  {
-    "filename": "modelo- declinar de competência - incompetência - crime em outra comarca.md",
-    "tags": [
-      "declinar competência",
-      "decisão",
-      "incompetência territorial",
-      "art70cpp",
-      "crime outra comarca",
-      "remessa autos"
-    ],
-    "descricao": "Decisão declinando competência territorial para outra comarca (local do crime)."
-  },
-  {
-    "filename": "MODELO - PAP produção antecipada de provas - depoimento acolhor - deferimento.md",
-    "tags": [
-      "deferir pap",
-      "decisão",
-      "produção antecipada provas",
-      "depoimento especial",
-      "lei 13431",
-      "criança adolescente"
-    ],
-    "descricao": "Decisão deferindo produção antecipada de prova (depoimento especial - Lei 13.431/17)."
-  },
-  {
-    "filename": "0002278-38.2023.8.17.2420- declinar competência - 1ª VARA CRIMINAL CAMARAGIBE- CONEXÃO INSTRUMENTAL - prevenção .md",
-    "tags": [
-      "declinar competência",
-      "decisão",
-      "conexão instrumental",
-      "prevenção",
-      "remessa autos",
-      "art76cpp"
-    ],
-    "descricao": "Decisão declinando competência por conexão instrumental e prevenção para outra vara criminal."
-  },
-  {
-    "filename": "indefere pedido de prisão - fundamentação genérica - conforme stj - modelo de outro juízo para adaptar.md",
-    "tags": [
-      "indeferir prisão preventiva",
-      "decisão",
-      "prisão preventiva",
-      "fundamentação genérica",
-      "gravidade abstrata",
-      "stj"
-    ],
-    "descricao": "Decisão indeferindo prisão preventiva por fundamentação genérica/gravidade abstrata."
-  },
-  {
-    "filename": "MODELO - extinção da punibilidade - cumprimento de acordo de não persecução penal - ANPP - fiança .md",
-    "tags": [
-      "extinção punibilidade",
-      "sentença",
-      "anpp",
-      "acordo não persecução penal",
-      "cumprimento acordo",
-      "art28a cpp",
-      "fiança"
-    ],
-    "descricao": "Sentença de extinção da punibilidade pelo cumprimento de ANPP."
-  },
-  {
-    "filename": "README.md",
-    "tags": [
-      "readme",
-      "repositório",
-      "decisões modelo",
-      "vara criminal",
-      "markdown",
-      "template"
-    ],
-    "descricao": "Arquivo README descrevendo o repositório de modelos de decisões da vara criminal."
-  },
-  {
-    "filename": "carta precatoria - cumprimendo de mandado de prisão.md",
-    "tags": [
-      "carta precatória",
-      "despacho",
-      "cumprimento mandado prisão",
-      "delegação",
+      "descumprimento de ordem judicial",
+      "desobediência",
+      "improbidade administrativa",
+      "corregedoria",
       "polícia civil",
-      "delegacia capturas"
+      "decisão"
     ],
-    "descricao": "Despacho determinando cumprimento de mandado de prisão via carta precatória."
+    "descricao": "Modelo de decisão que, diante do reiterado descumprimento de ordem judicial por parte da autoridade policial, determina a expedição de ofícios à Corregedoria da SDS e ao Ministério Público para apuração de ilícito administrativo, improbidade e crime de desobediência."
   },
   {
-    "filename": "decisão - deferimento - quebra sigilo bancário - individualização das contas correntes.md",
+    "filename": "DESPACHO_JUNTADA_PROCURACAO_QUEIXA_CRIME.json",
     "tags": [
-      "deferir quebra sigilo",
-      "decisão",
-      "quebra sigilo bancário",
-      "lc 105",
-      "individualização contas",
-      "investigação"
-    ],
-    "descricao": "Decisão deferindo quebra de sigilo bancário de contas especificadas."
-  },
-  {
-    "filename": "modelo - comunicar corregedoria  - oficial de justiça.md",
-    "tags": [
-      "comunicar corregedoria",
-      "decisão",
-      "atraso oficial justiça",
-      "cumprimento mandado",
-      "prazo",
-      "responsabilidade"
-    ],
-    "descricao": "Decisão comunicando à Corregedoria atraso no cumprimento de mandado por Oficial de Justiça."
-  },
-  {
-    "filename": "Revoga citação por edital sem o esgotamento de diligência - arquivar provisoriamente enquanto não se cumpre as diligências.md",
-    "tags": [
-      "revogar citação edital",
-      "decisão",
-      "nulidade citação",
-      "citação por edital",
-      "esgotamento diligências",
-      "arquivamento provisório"
-    ],
-    "descricao": "Decisão revogando citação editalícia por falta de esgotamento de diligências."
-  },
-  {
-    "filename": "cautelar -Declina Competência-Incompetência-Crime contra criança e adolescente-Vara Mulher.audiência designada.md",
-    "tags": [
-      "declinar competência",
-      "decisão",
-      "incompetência",
-      "crime criança adolescente",
-      "vara violência doméstica",
-      "stj",
-      "lei 13431"
-    ],
-    "descricao": "Decisão declinando competência para Vara de Violência Doméstica (crime contra criança/adolescente)."
-  },
-  {
-    "filename": "decidsão - indefere novo pedido de desarquivamento.md",
-    "tags": [
-      "indeferir desarquivamento",
-      "decisão",
-      "termo circunstanciado",
-      "arquivamento",
-      "novas provas",
-      "art18cpp",
-      "sumula 524 stf"
-    ],
-    "descricao": "Decisão indeferindo novo pedido de desarquivamento de TCO por ausência de provas novas."
-  },
-  {
-    "filename": "decisão  rejeição preliminar resposta à acusação -prescrição e anpp.md",
-    "tags": [
-      "rejeitar preliminar",
-      "decisão",
-      "resposta acusação",
-      "prescrição",
-      "anpp",
-      "descumprimento acordo",
-      "designar audiência"
-    ],
-    "descricao": "Decisão que rejeita preliminares de prescrição e ANPP (descumprido) e designa audiência."
-  },
-  {
-    "filename": "decisão - deferimento - sigilo bancário - conforme representação.md",
-    "tags": [
-      "deferir quebra sigilo",
-      "decisão",
-      "quebra sigilo bancário",
-      "lc 105",
-      "representação policial",
-      "investigação"
-    ],
-    "descricao": "Decisão deferindo quebra de sigilo bancário conforme representação policial."
-  },
-  {
-    "filename": "decisão - indeferimento - quebra sigilo bancário - não individualização das contas correntes.md",
-    "tags": [
-      "indeferir quebra sigilo",
-      "decisão",
-      "quebra sigilo bancário",
-      "lc 105",
-      "fundamentação genérica",
-      "individualização contas"
-    ],
-    "descricao": "Decisão indeferindo quebra de sigilo bancário por falta de individualização das contas."
-  },
-  {
-    "filename": "decisão - indeferimento de liberdade provisória - não demosntrada imprescindibilidade da presença do pai com os filhos  - reincidente especifico e quantidade de droga.md",
-    "tags": [
-      "indeferir liberdade",
-      "decisão",
-      "liberdade provisória",
-      "prisão domiciliar",
-      "imprescindibilidade pai",
-      "reincidência",
-      "tráfico drogas"
-    ],
-    "descricao": "Decisão indeferindo liberdade provisória (pai de menores, reincidente, tráfico)."
-  },
-  {
-    "filename": "decisão - indeferimento restituição de coisa apreendida -perda de objeto.md",
-    "tags": [
-      "indeferir restituição",
-      "sentença",
-      "restituição coisa apreendida",
-      "perda de objeto",
-      "alienação antecipada",
-      "extinção sem mérito"
-    ],
-    "descricao": "Sentença extinguindo pedido de restituição por perda de objeto (bem já alienado/destinado)."
-  },
-  {
-    "filename": "decisão - mp não oferta anpp - procuradoria de justiça art. 28 - tráfico privilegiado - processo em curso.md",
-    "tags": [
-      "remessa art28cpp",
-      "decisão",
-      "anpp",
-      "recusa mp",
-      "ações penais em curso",
-      "tema 1139 stj",
-      "procuradoria geral"
-    ],
-    "descricao": "Decisão remetendo autos à PGJ (art. 28 CPP) por recusa do MP em ofertar ANPP (ações em curso)."
-  },
-  {
-    "filename": "decisão - nega provimento ao rese - dr. edgar está vivo - peça de difícil intelecção - dever de lealdade processual.md",
-    "tags": [
-      "negar seguimento rese",
-      "decisão",
-      "recurso sentido estrito",
-      "não cabimento",
-      "anpp",
-      "erro",
-      "chamar feito à ordem"
-    ],
-    "descricao": "Decisão que nega seguimento a RESE incabível e chama o feito à ordem sobre ANPP."
-  },
-  {
-    "filename": "decisão - querelante não apresentou procuração - aguardar decurso do prazo decadencial em arquivo provisório.md",
-    "tags": [
-      "arquivo provisório",
-      "decisão",
-      "queixa-crime",
-      "procuração ausente",
-      "prazo decadencial",
-      "art44cpp"
-    ],
-    "descricao": "Decisão determinando aguardar prazo decadencial em arquivo (querelante sem procuração)."
-  },
-  {
-    "filename": "decisão - relaxamento prisão excesso de prazo + designação de audiência.md",
-    "tags": [
-      "relaxamento prisão",
-      "decisão",
-      "excesso de prazo",
-      "prisão ilegal",
-      "art5 cf",
-      "art316cpp",
-      "designar audiência"
-    ],
-    "descricao": "Decisão relaxando prisão preventiva por excesso de prazo e designando audiência."
-  },
-  {
-    "filename": "deisão - rejeição parcial da denúncia - litispendencia.md",
-    "tags": [
-      "rejeição parcial denúncia",
-      "decisão",
-      "litispendência",
-      "art395cpp",
-      "associação criminosa",
-      "duplicidade ações"
-    ],
-    "descricao": "Decisão de rejeição parcial da denúncia por litispendência (associação criminosa)."
-  },
-  {
-    "filename": "deisão - rejeição parcial da denúncia - relaxamento de prisao por excesso de prazo.md",
-    "tags": [
-      "rejeição parcial denúncia",
-      "decisão",
-      "relaxamento prisão",
-      "excesso de prazo",
-      "litispendência",
-      "art395cpp",
-      "posse arma"
-    ],
-    "descricao": "Decisão que relaxa prisão por excesso de prazo e rejeita parcialmente denúncia (litispendência)."
-  },
-  {
-    "filename": "deisão - rejeição parcial da denúncia - tentativa de furto - atos preparatorios - vista mp instituos despenalizadores.md",
-    "tags": [
-      "rejeição parcial denúncia",
-      "decisão",
-      "tentativa furto",
-      "atos preparatórios",
-      "atipicidade",
-      "art395cpp",
-      "institutos despenalizadores"
-    ],
-    "descricao": "Decisão rejeitando parcialmente denúncia (tentativa de furto - atos preparatórios) e abrindo vista ao MP."
-  },
-  {
-    "filename": "modelo - cobrar a cemando devolução de expediente.md",
-    "tags": [
-      "cobrar devolução mandado",
       "despacho",
-      "central de mandados",
-      "prazo",
-      "comunicação cgj"
+      "queixa-crime",
+      "procuração",
+      "poderes especiais",
+      "art. 44 cpp",
+      "intimação"
     ],
-    "descricao": "Despacho cobrando devolução de mandado à Central de Mandados."
+    "descricao": "Modelo de despacho para intimar o querelante a regularizar a representação processual, juntando procuração com poderes especiais, conforme exigência do art. 44 do CPP, sob pena de cancelamento da distribuição da queixa-crime."
   },
   {
-    "filename": "modelo - comunicar corregedoria sobre atuação de servidor - oficial de justiça.md",
+    "filename": "INDEFERIMENTO_QUEBRA_SIGILO_BANCARIO.md",
     "tags": [
-      "comunicar corregedoria",
-      "decisão",
-      "atraso oficial justiça",
-      "desídia",
-      "princípio eficiência",
-      "responsabilidade",
-      "improbidade"
+      "indeferimento",
+      "quebra de sigilo bancário",
+      "medida cautelar",
+      "investigação",
+      "decisão"
     ],
-    "descricao": "Decisão comunicando à Corregedoria e MP sobre possível desídia de oficial de justiça."
+    "descricao": "Modelo de decisão que indefere representação da autoridade policial por quebra de sigilo bancário, por entender que o pedido é genérico, abrange período injustificado e não individualiza as contas, além de existirem outras diligências menos gravosas a serem realizadas."
   },
   {
-    "filename": "modelo - decisão - nega cancelamento de audiência de composição civil - art. 520 do cpp de observância obrigatória.md",
+    "filename": "DEFERIMENTO_PRODUCAO_ANTECIPADA_PROVA_DEPOIMENTO_ESPECIAL.json",
     "tags": [
-      "manter audiência",
-      "decisão",
-      "audiência reconciliação",
-      "art520cpp",
-      "rito sumário",
-      "nulidade"
+      "produção antecipada de prova",
+      "depoimento especial",
+      "cautelar",
+      "Lei n. 13.431/2017",
+      "criança e adolescente",
+      "vítima"
     ],
-    "descricao": "Decisão mantendo audiência do art. 520 do CPP (rito sumário)."
+    "descricao": "Modelo de decisão que defere o pedido do Ministério Público para produção antecipada de prova, consistente na oitiva de criança ou adolescente vítima/testemunha por meio de Depoimento Especial, conforme a Lei n. 13.431/2017."
   },
   {
-    "filename": "modelo - deferimento - prisão preveniva estupro de vulnerável e buscae apreensão .md",
+    "filename": "SENTENCA_REJEICAO_EMBARGOS_DECLARACAO_REFORMA_MERITO_IMPOSSIBILIDADE.md",
     "tags": [
-      "decretar prisão preventiva",
-      "decisão",
-      "deferir busca apreensão",
-      "estupro vulnerável",
-      "garantia ordem pública",
-      "art312cpp",
-      "art240cpp"
-    ],
-    "descricao": "Decisão decretando prisão preventiva e busca/apreensão (estupro de vulnerável)."
-  },
-  {
-    "filename": "modelo - deferimento - prisão preveniva estupro de vulnerável.md",
-    "tags": [
-      "decretar prisão preventiva",
-      "decisão",
-      "estupro vulnerável",
-      "art217a cp",
-      "garantia ordem pública",
-      "conveniência instrução",
-      "art312cpp"
-    ],
-    "descricao": "Decisão decretando prisão preventiva em caso de estupro de vulnerável."
-  },
-  {
-    "filename": "modelo - embargos de declaração - reformar mérito - impossibilidade - rejeição.md",
-    "tags": [
-      "rejeitar embargos",
       "sentença",
       "embargos de declaração",
-      "art382cpp",
-      "reforma mérito",
-      "omissão",
-      "contradição"
+      "rejeição",
+      "art. 382 cpp",
+      "rediscussão de mérito"
     ],
-    "descricao": "Sentença rejeitando embargos de declaração por visarem reforma do mérito."
+    "descricao": "Modelo de sentença que rejeita embargos de declaração opostos contra sentença condenatória, por entender que a parte embargante busca, na verdade, a rediscussão do mérito da causa, o que é incabível nesta via recursal."
   },
   {
-    "filename": "modelo geral - MPU medida protetiva de urgência + PAP produção antecipada de provas - extinção.md",
+    "filename": "SENTENCA_EXTINCAO_DECADENCIA_E_ARQUIVAMENTO.md",
     "tags": [
-      "extinção processo",
       "sentença",
-      "medida protetiva",
-      "pap",
-      "criança adolescente",
-      "lei 13431",
-      "lei 14344"
-    ],
-    "descricao": "Sentença extinguindo cautelar de medida protetiva e PAP (criança/adolescente) após cumprimento."
-  },
-  {
-    "filename": "modelo simples -  rejeição preliminar resposta à acusação - absolvição sumária + receber defesa resposta à acusação.md",
-    "tags": [
-      "rejeitar preliminar",
-      "decisão",
-      "resposta acusação",
-      "absolvição sumária",
-      "art397cpp",
-      "designar audiência",
-      "instrução"
-    ],
-    "descricao": "Decisão simples rejeitando absolvição sumária e designando audiência."
-  },
-  {
-    "filename": "modelo- declinar de competência - incompetência - crime em outra comarca - jaboatão .md",
-    "tags": [
-      "declinar competência",
-      "decisão",
-      "incompetência territorial",
-      "art70cpp",
-      "crime outra comarca",
-      "jaboatão dos guararapes",
-      "remessa autos"
-    ],
-    "descricao": "Decisão declinando competência para Jaboatão dos Guararapes (local do crime)."
-  },
-  {
-    "filename": "modelo- declinar de competência - incompetência - crime em outra comarca - reclamação trabalhista.md",
-    "tags": [
-      "declinar competência",
-      "decisão",
-      "incompetência territorial",
-      "art70cpp",
-      "crime outra comarca",
-      "justiça do trabalho",
-      "remessa autos"
-    ],
-    "descricao": "Decisão declinando competência (crime ocorrido em processo trabalhista em outra comarca)."
-  },
-  {
-    "filename": "negativa de assistente de acusação - pap e afins.md",
-    "tags": [
-      "indeferir assistente acusação",
-      "decisão",
-      "assistente ministério público",
-      "habilitação",
-      "ação penal",
-      "produção antecipada provas"
-    ],
-    "descricao": "Decisão indeferindo habilitação de assistente de acusação em fase pré-processual (PAP)."
-  },
-  {
-    "filename": "- declinar competência - 1ª VARA CRIMINAL CAMARAGIBE- CONEXÃO INSTRUMENTAL - prevenção .md",
-    "tags": [
-      "declinar competência",
-      "decisão",
-      "conexão instrumental",
-      "prevenção",
-      "art76cpp",
-      "remessa autos",
-      "tco"
-    ],
-    "descricao": "Decisão declinando competência em TCO por conexão e prevenção para outra vara criminal."
-  },
-  {
-    "filename": "0000288-71.2019.8.17.0150 - tco - designar transação penal.md",
-    "tags": [
-      "reiterar ofício",
-      "despacho",
-      "tco",
-      "transação penal",
-      "seres",
-      "cemep"
-    ],
-    "descricao": "Despacho reiterando ofício à SERES/CEMEP (TCO - Transação Penal)."
-  },
-  {
-    "filename": "0000292-11.2019.8.17.0150 - deferimento - quebra sigilo bancário.md",
-    "tags": [
-      "indeferir quebra sigilo",
-      "decisão",
-      "quebra sigilo bancário",
-      "lc 105",
-      "fundamentação insuficiente",
-      "individualização contas",
-      "outras diligências"
-    ],
-    "descricao": "Decisão indeferindo quebra ampla de sigilo bancário por falta de individualização e fundamentação."
-  },
-  {
-    "filename": "0000944-31.2019.8.17.1410 - intimar autuado comprovar cumprimento transação penal.md",
-    "tags": [
-      "intimar cumprimento",
-      "despacho",
-      "transação penal",
-      "anpp",
-      "suspensão condicional processo",
-      "comprovação"
-    ],
-    "descricao": "Despacho intimando autuado a comprovar cumprimento de acordo (TP, ANPP ou SCP)."
-  },
-  {
-    "filename": "0001208-15.2025.8.17.2420-  conexão instrumental   - suscitar conflito negativo de competência - remeter TJPE.md",
-    "tags": [
-      "suscitar conflito competência",
-      "decisão",
-      "conflito negativo",
-      "conexão instrumental",
-      "vara violência doméstica",
-      "remessa tjpe"
-    ],
-    "descricao": "Decisão suscitando conflito negativo de competência por conexão (Vara Comum x Violência Doméstica)."
-  },
-  {
-    "filename": "0002329-74.2019.8.17.0420 - receber recurso apelação - certificar trânsito em julgado corréus - digitalizar.md",
-    "tags": [
-      "receber apelação",
-      "decisão",
-      "recurso apelação",
-      "digitalização",
-      "trânsito em julgado corréus",
-      "guia provisória"
-    ],
-    "descricao": "Decisão recebendo apelação, determinando digitalização e certificação de trânsito para corréus."
-  },
-  {
-    "filename": "0002843-11.2012.8.17.1410 - intimar advogado juntar procuração.md",
-    "tags": [
-      "intimar juntar procuração",
-      "despacho",
-      "queixa-crime",
-      "procuração poderes especiais",
-      "art44cpp",
-      "regularização"
-    ],
-    "descricao": "Despacho intimando querelante a juntar procuração com poderes especiais."
-  },
-  {
-    "filename": "0003366-98.2020.8.17.0001 - MPU medida protetiva de urgência  - extinção e revogação .md",
-    "tags": [
-      "extinção medida protetiva",
-      "sentença",
-      "medida protetiva",
-      "criança adolescente",
-      "lei 13431",
-      "lei 14344",
-      "revogação parcial"
-    ],
-    "descricao": "Sentença extinguindo processo de medida protetiva (criança/adolescente) e revogando-a parcialmente."
-  },
-  {
-    "filename": "0004473-80.2020.8.87.0001 - rese recurso em sentido estrito - juízo de retratação - erro contagem decadencia.md",
-    "tags": [
-      "juízo retratação",
-      "decisão",
-      "recurso sentido estrito",
-      "rese",
+      "extinção de punibilidade",
       "decadência",
-      "erro",
-      "art589cpp"
+      "arquivamento",
+      "TCO",
+      "crimes contra a honra",
+      "ameaça"
     ],
-    "descricao": "Decisão em juízo de retratação (RESE) tornando sem efeito sentença por erro na contagem da decadência."
+    "descricao": "Modelo de sentença que, em um mesmo ato, declara a extinção da punibilidade por decadência em relação a um crime de ação penal privada e, em seguida, determina o arquivamento do feito quanto a outro delito, acolhendo a promoção do Ministério Público."
   },
   {
-    "filename": "00129-60.2020-Quebra de sigilo e interceptação telefônica-INDEFERE.md",
+    "filename": "INSTAURACAO_INCIDENTE_INSANIDADE_MENTAL.json",
     "tags": [
-      "indeferir interceptação",
-      "decisão",
-      "quebra sigilo telefônico",
-      "interceptação telefônica",
-      "lei 9296",
-      "requisitos ausentes",
-      "indícios insuficientes"
+      "incidente de insanidade mental",
+      "exame pericial",
+      "suspensão do processo",
+      "art. 149 cpp",
+      "decisão"
     ],
-    "descricao": "Decisão indeferindo quebra de sigilo e interceptação telefônica por falta de requisitos."
+    "descricao": "Modelo de decisão que instaura incidente de insanidade mental a pedido da defesa, suspendendo o processo principal e nomeando curador ao acusado, com as devidas determinações para a realização do exame pericial."
   },
   {
-    "filename": "0014169-63.2008.8.17.0001 - decisão - restituição de coisa apreendida.md",
+    "filename": "INDEFERIMENTO_USO_VEICULO_E_ALIENACAO_ANTECIPADA.json",
     "tags": [
-      "deferir restituição",
-      "decisão",
-      "restituição coisa apreendida",
-      "arma de fogo",
-      "propriedade comprovada",
-      "art120cpp",
-      "intimação sentença"
+      "alienação antecipada",
+      "uso de bem apreendido",
+      "tráfico de drogas",
+      "lei 11.343/2006",
+      "decisão"
     ],
-    "descricao": "Decisão deferindo restituição de arma de fogo apreendida."
+    "descricao": "Modelo de decisão que indefere o pedido da autoridade policial para uso de veículo apreendido em crime de tráfico de drogas, mas determina, de ofício, a sua alienação antecipada para evitar a depreciação do bem."
   },
   {
-    "filename": "0014417-87.2012.8.17.0001 - declaração de decisão - transação penal .md",
+    "filename": "NULIDADE_CITACAO_EDITAL_ESGOTAMENTO_DILIGENCIAS_MP.md",
     "tags": [
-      "declarar decisão",
-      "sentença",
-      "embargos declaração",
-      "suspensão condicional processo",
-      "correção erro material",
-      "condições acordo"
-    ],
-    "descricao": "Sentença acolhendo declaração para corrigir erro material em decisão de suspensão condicional."
-  },
-  {
-    "filename": "anpp - celular  - restituição de coisa apreendida.md",
-    "tags": [
-      "deferir restituição",
-      "decisão",
-      "restituição coisa apreendida",
-      "celular",
-      "anpp",
-      "bem lícito",
-      "art120cpp"
-    ],
-    "descricao": "Decisão deferindo restituição de celular apreendido em contexto de ANPP."
-  },
-  {
-    "filename": "Inércia da Delegacia - Oficiar corregedoria SDS e MP - ílicito adminsitrativo e criminal - comprovante de depósito.md",
-    "tags": [
-      "oficiar corregedoria",
-      "decisão",
-      "inércia delegacia",
-      "descumprimento ordem judicial",
-      "princípio eficiência",
-      "desobediência",
-      "improbidade"
-    ],
-    "descricao": "Decisão oficiando Corregedoria SDS e MP por inércia da delegacia em cumprir ordem judicial."
-  },
-  {
-    "filename": "MODELO - PAP produção antecipada de provas - depoimento acolhedor - deferimento - poder requisitório.md",
-    "tags": [
-      "deferir pap",
-      "decisão",
-      "produção antecipada provas",
-      "depoimento especial",
-      "lei 13431",
-      "poder requisitório mp",
-      "indeferir requisição judicial"
-    ],
-    "descricao": "Decisão deferindo PAP (depoimento especial) e indeferindo pedido de requisição judicial (poder MP)."
-  },
-  {
-    "filename": "MODELO - PAP produção antecipada de provas - depoimento acolhedor - deferimento MPU.md",
-    "tags": [
-      "deferir pap",
-      "decisão",
-      "deferir medida protetiva",
-      "produção antecipada provas",
-      "depoimento especial",
-      "medida protetiva",
-      "lei 13431",
-      "lei 14344"
-    ],
-    "descricao": "Decisão deferindo PAP (depoimento especial) e medidas protetivas (Lei 13.431 e 14.344)."
-  },
-  {
-    "filename": "MODELO - PAP produção antecipada de provas - depoimento acolhedor - deferimento segundo ofício.md",
-    "tags": [
-      "deferir pap",
-      "decisão",
-      "produção antecipada provas",
-      "depoimento especial",
-      "lei 13431",
-      "criança adolescente"
-    ],
-    "descricao": "Decisão deferindo produção antecipada de prova (depoimento especial - Lei 13.431/17) - Modelo 2."
-  },
-  {
-    "filename": "MODELO - art. 366 CPP - citação por edital - suspensão processo e prazo prescricional + arquivar provisoriamente - novo.md",
-    "tags": [
-      "suspensão processo",
-      "decisão",
-      "art366cpp",
+      "nulidade de citação",
       "citação por edital",
-      "réu revel",
-      "suspensão prescrição",
-      "arquivamento provisório"
+      "ônus da acusação",
+      "diligências",
+      "decisão"
     ],
-    "descricao": "Decisão suspendendo processo e prescrição (art. 366 CPP) após citação editalícia sem resposta."
+    "descricao": "Modelo de decisão que anula citação por edital feita prematuramente e determina que o Ministério Público realize diligências para localizar o réu, estabelecendo o ônus da acusação."
   },
   {
-    "filename": "MODELO - declinar competência - vara de violência doméstica e familiar contra a mulher da capital - conexão MPU.md",
+    "filename": "DESPACHO_RENUNCIA_MANDATO_ADVOGADO.json",
     "tags": [
-      "declinar competência",
-      "decisão",
-      "conexão instrumental",
-      "vara violência doméstica",
-      "medida protetiva",
-      "denunciação caluniosa",
-      "prevenção"
+      "despacho",
+      "renúncia de mandato",
+      "intimação",
+      "defensor público",
+      "advogado"
     ],
-    "descricao": "Decisão declinando competência por conexão entre ação penal e medida protetiva (Vara Viol. Dom.)."
+    "descricao": "Modelo de despacho que trata da renúncia de mandato por advogado constituído, determinando a intimação pessoal do acusado para constituir novo patrono, com nomeação da Defensoria Pública em caso de inércia."
   },
   {
-    "filename": "MODELO - extinção PAP sem resolução do mérito - vitima n localizada.md",
+    "filename": "Sentença - extinção da punibilidade - cumprimento de acordo de não persecução penal - ANPP - fiança.md",
     "tags": [
-      "extinção sem mérito",
       "sentença",
-      "produção antecipada provas",
-      "pap",
-      "vítima não localizada",
-      "perda objeto",
-      "art485cpc"
+      "extinção de punibilidade",
+      "anpp",
+      "acordo de não persecução penal",
+      "art. 28-a cpp"
     ],
-    "descricao": "Sentença extinguindo PAP sem mérito por vítima não localizada (perda de objeto)."
+    "descricao": "Modelo de sentença que declara a extinção da punibilidade do agente em razão do integral cumprimento do Acordo de Não Persecução Penal (ANPP), com providências sobre fiança e comunicações."
   },
   {
-    "filename": "MODELO - recebimento recurso apelação criminal + intimar contrarrazões.md",
+    "filename": "REJEICAO_DENUNCIA_DESCLASSIFICACAO_ART28.json",
     "tags": [
-      "receber apelação",
-      "decisão",
-      "recurso apelação",
-      "tempestividade",
-      "intimar contrarrazões",
-      "guia provisória"
-    ],
-    "descricao": "Decisão recebendo apelação criminal e intimando para contrarrazões."
-  },
-  {
-    "filename": "MODELO - recebimento recurso apelação criminal + remeter TJPE SEM contrarrazões - art. 600 § 4º CPP.md",
-    "tags": [
-      "receber apelação",
-      "decisão",
-      "recurso apelação",
-      "remessa tjpe",
-      "art600 cpp",
-      "sem contrarrazões",
-      "guia provisória"
-    ],
-    "descricao": "Decisão recebendo apelação e remetendo ao TJPE sem contrarrazões (art. 600, §4º, CPP)."
-  },
-  {
-    "filename": "REJEIÇÃO DA DENÚNCIA - desclassificação art. 28 da Lei de Drogas precedentes stj - pequena quantidade e in dubio pro reo + ATIPICIDADE DA CONDUTA -  STF.md",
-    "tags": [
-      "rejeição denúncia",
-      "decisão",
+      "rejeição de denúncia",
       "desclassificação",
-      "tráfico drogas",
-      "art28 lei drogas",
-      "atipicidade",
-      "re 635659 stf",
-      "art395cpp"
+      "tráfico de drogas",
+      "posse para uso",
+      "art. 28",
+      "art. 33",
+      "inconstitucionalidade",
+      "STF RE 635659",
+      "atipicidade"
     ],
-    "descricao": "Decisão rejeitando denúncia de tráfico, desclassificando para art. 28 e reconhecendo atipicidade (STF)."
+    "descricao": "Modelo de decisão que, em fase de recebimento, desclassifica a imputação de tráfico (art. 33) para posse para uso (art. 28) e, em seguida, rejeita a denúncia com base na atipicidade penal da conduta, aplicando o entendimento do STF (RE 635659) por analogia a outras drogas."
   },
   {
-    "filename": "RECEBIMENTO DA DENÚNCIA - ESTRUTURADA.md",
+    "filename": "DECLINIO_COMPETENCIA_CRIANCA_ADOLESCENTE_STJ.json",
+    "tags": [
+      "declínio de competência",
+      "estupro de vulnerável",
+      "lei 13.431/2017",
+      "STJ",
+      "EAREsp 2.099.532/RJ",
+      "violência doméstica",
+      "criança e adolescente"
+    ],
+    "descricao": "Modelo de decisão que declina da competência para a Vara de Violência Doméstica em casos de crimes contra crianças e adolescentes, com base no entendimento consolidado pelo STJ no EAREsp n. 2.099.532/RJ e jurisprudência posterior, independentemente do gênero da vítima ou do contexto doméstico."
+  },
+  {
+    "filename": "DESPACHO_AGUARDANDO_IP.json",
+    "tags": [
+      "despacho",
+      "aguardando inquérito policial",
+      "réu preso",
+      "réu solto",
+      "procedimento inicial"
+    ],
+    "descricao": "Modelo de despacho inicial para processos que aguardam a chegada do inquérito policial, com instruções distintas para casos de réu preso e réu solto, incluindo o controle de prazos e a atualização de sistemas."
+  },
+  {
+    "filename": "DECLINIO_COMPETENCIA_TRIBUNAL_JURI.json",
+    "tags": [
+      "declínio de competência",
+      "tribunal do júri",
+      "crime doloso contra a vida",
+      "incompetência",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que declina da competência de um flagrante para a vara do júri (1ª Vara Criminal), por se tratar de crime doloso contra a vida."
+  },
+  {
+    "filename": "HABEAS_CORPUS_SALVO_CONDUTO_CULTIVO_CANNABIS.json",
+    "tags": [
+      "habeas corpus",
+      "salvo-conduto",
+      "cannabis medicinal",
+      "cultivo doméstico",
+      "direito à saúde",
+      "atipicidade",
+      "liminar"
+    ],
+    "descricao": "Modelo de decisão liminar em Habeas Corpus preventivo, concedendo salvo-conduto para paciente cultivar cannabis sativa para fins exclusivamente medicinais, com base no direito à saúde e na atipicidade material da conduta, amparado por jurisprudência do STJ."
+  },
+  {
+    "filename": "DECISAO_POS_RESPOSTA_INDEFERIMENTO_PERICIA.json",
+    "tags": [
+      "resposta à acusação",
+      "indeferimento de perícia",
+      "exame toxicológico",
+      "absolvição sumária",
+      "designação de audiência",
+      "decisão interlocutória"
+    ],
+    "descricao": "Modelo de decisão proferida após a resposta à acusação, que indefere pedido de exame toxicológico com base em jurisprudência do STJ, afasta a hipótese de absolvição sumária e designa audiência de instrução."
+  },
+  {
+    "filename": "INDEFERIMENTO_PRISAO_PREVENTIVA.md",
+    "tags": [
+      "indeferimento",
+      "prisão preventiva",
+      "ausência de fundamentos",
+      "decisão",
+      "habeas corpus",
+      "jurisprudência"
+    ],
+    "descricao": "Modelo de decisão que indefere pedido de prisão preventiva com base na ausência de fundamentos concretos, citando jurisprudência do STJ e STF sobre a excepcionalidade da medida e a insuficiência da gravidade abstrata do delito."
+  },
+  {
+    "filename": "DECISAO_PRODUCAO_ANTECIPADA_E_MEDIDAS_PROTETIVAS.json",
+    "tags": [
+      "produção antecipada de prova",
+      "depoimento especial",
+      "medida protetiva",
+      "lei 13.431/2017",
+      "lei 14.344/2022",
+      "lei henry borel",
+      "criança e adolescente"
+    ],
+    "descricao": "Modelo de decisão que acumula dois pedidos: o deferimento de produção antecipada de prova (Depoimento Especial) e a aplicação de medidas protetivas de urgência em favor de criança/adolescente."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_PUNIBILIDADE_TRANSACAO_PENAL.md",
+    "tags": [
+      "sentença",
+      "extinção de punibilidade",
+      "transação penal",
+      "lei 9.099/95",
+      "JECRIM"
+    ],
+    "descricao": "Modelo de sentença que declara a extinção da punibilidade do agente em razão do integral cumprimento da Transação Penal, com base no art. 84, parágrafo único, da Lei n. 9.099/95."
+  },
+  {
+    "filename": "RECEBIMENTO_DENUNCIA.json",
     "tags": [
       "recebimento da denúncia",
       "decisão",
       "citação",
-      "analisar denúncia ofertada pelo MP",
-      "art396cpp",
+      "art. 396 cpp",
       "diligências mp",
       "vítima menor",
-      "tráfico",
-      "vítima menor",
-      "pedido de prsão",
+      "tráfico de drogas",
+      "pedido de prisão",
       "réu preso"
     ],
-    "descricao": "Modelo geral de decisão para recebimento da denúncia com instruções internas para serem adaptadas em caso de pedido de prisão feito na denúncia, processo que verse sobre tráfico, processo que verse sobre vítima menor."
+    "descricao": "Modelo geral de decisão para recebimento da denúncia com blocos condicionais para casos de pedido de prisão, tráfico de drogas, vítima menor e réu já preso."
+  },
+  {
+    "filename": "DECISAO_MANUTENCAO_RESE_TRASLADO.json",
+    "tags": [
+      "recurso em sentido estrito",
+      "RESE",
+      "juízo de retratação",
+      "manutenção da decisão",
+      "traslado",
+      "audiência de instrução",
+      "depoimento acolhedor"
+    ],
+    "descricao": "Modelo de decisão que mantém a decisão recorrida em sede de juízo de retratação de Recurso em Sentido Estrito (RESE), determina a formação de traslado para remessa ao Tribunal e designa continuação de audiência."
+  },
+  {
+    "filename": "decisão - restituição de coisa apreendida e intimação de réu solto da sentença por seu advogado constituído (exceto defensoria)",
+    "tags": [
+      "restituição de coisa apreendida",
+      "arma de fogo",
+      "intimação de sentença",
+      "réu solto",
+      "decisão interlocutória"
+    ],
+    "descricao": "Modelo de decisão que, em um primeiro momento, defere o pedido de restituição de arma de fogo e, em seguida, determina a intimação de réu solto sobre a sentença condenatória por meio de seu defensor, com base em jurisprudência do STJ."
+  },
+  {
+    "filename": "REJEICAO_QUEIXA_CRIME_ILEGITIMIDADE_ATIVA.md",
+    "tags": [
+      "queixa-crime",
+      "rejeição",
+      "calúnia",
+      "difamação",
+      "denunciação caluniosa",
+      "art. 395 cpp",
+      "animus narrandi",
+      "ilegitimidade ativa"
+    ],
+    "descricao": "Modelo de decisão que rejeita queixa-crime com base no art. 395 do CPP, por ausência de dolo específico (animus narrandi) nos crimes contra a honra e por ilegitimidade ativa dos querelantes quanto ao crime de denunciação caluniosa."
+  },
+  {
+    "filename": "DESMEMBRAMENTO_PROCESSO_ART_80_CPP.md",
+    "tags": [
+      "desmembramento",
+      "art. 80 cpp",
+      "pluralidade de réus",
+      "réu revel",
+      "citação por edital",
+      "celeridade processual",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que determina o desmembramento do processo, com base no art. 80 do CPP, em razão da não localização de um dos corréus, a fim de garantir a celeridade processual para o réu que já apresentou defesa. A decisão também prossegue com o feito para o réu presente, afastando a absolvição sumária e designando audiência."
+  },
+  {
+    "filename": "INDEFERIMENTO_RESTITUICAO_E_POS_DEFESA_PREVIA.",
+    "tags": [
+      "indeferimento de restituição",
+      "tráfico de drogas",
+      "bem apreendido",
+      "defesa prévia",
+      "absolvição sumária",
+      "designação de audiência",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão mista que, em um primeiro momento, indefere pedido de restituição de bem apreendido em crime de tráfico e, em seguida, analisa a defesa prévia, afasta a absolvição sumária e designa audiência de instrução."
+  },
+  {
+    "filename": "DECLINIO_COMPETENCIA_TERRITORIAL.md",
+    "tags": [
+      "declínio de competência",
+      "competência territorial",
+      "art. 70 cpp",
+      "lugar da infração",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que declina da competência territorial para o juízo do local onde a infração penal se consumou, nos termos do art. 70 do Código de Processo Penal."
+  },
+  {
+    "filename": "MODELO - PAP produção antecipada de provas - depoimento acolhedor - deferimento segundo ofício.md",
+    "tags": [
+      "produção antecipada de prova",
+      "depoimento especial",
+      "cautelar",
+      "lei 13.431/2017",
+      "criança e adolescente",
+      "vítima"
+    ],
+    "descricao": "Modelo de decisão que defere o pedido do Ministério Público para produção antecipada de prova, consistente na oitiva de criança ou adolescente vítima/testemunha por meio de Depoimento Especial, conforme a Lei 13.431/2017."
+  },
+  {
+    "filename": "Declaração de Incompetência-Crime contra criança e adolescente-Competência da Vara de Violência Contra Mulher em camaragibe.json",
+    "tags": [
+      "declínio de competência",
+      "estupro de vulnerável",
+      "lei 13.431/2017",
+      "STJ",
+      "EAREsp 2.099.532/RJ",
+      "violência doméstica",
+      "criança e adolescente"
+    ],
+    "descricao": "Modelo de decisão que declina da competência para a Vara de Violência Doméstica em casos de crimes contra crianças e adolescentes, com base no entendimento consolidado pelo STJ no EAREsp n. 2.099.532/RJ e jurisprudência posterior, independentemente do gênero da vítima ou do contexto doméstico."
+  },
+  {
+    "filename": "DESPACHO_ARQUIVAMENTO_PROVISORIO_ANPP.json",
+    "tags": [
+      "despacho",
+      "arquivamento provisório",
+      "ANPP",
+      "acordo de não persecução penal",
+      "ministério público"
+    ],
+    "descricao": "Modelo de despacho para arquivar provisoriamente o feito enquanto se aguarda a realização de audiência de Acordo de Não Persecução Penal (ANPP) pelo Ministério Público."
+  },
+  {
+    "filename": "CUMPRIMENTO_CARTA_PRECATORIA.md",
+    "tags": [
+      "carta precatória",
+      "cumpra-se",
+      "despacho",
+      "cooperação jurisdicional"
+    ],
+    "descricao": "Modelo de despacho padrão ('cumpra-se') para processamento de carta precatória, com instruções detalhadas para a secretaria em caso de cumprimento positivo, negativo (por mudança de endereço ou outros motivos) e para designação de audiência."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_PUNIBILIDADE_MORTE_AGENTE.md",
+    "tags": [
+      "sentença",
+      "extinção de punibilidade",
+      "morte do agente",
+      "art. 107 cpb"
+    ],
+    "descricao": "Modelo de sentença que declara a extinção da punibilidade do acusado em razão de seu falecimento, com base no art. 107, I, do Código Penal."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_MEDIDA_CAUTELAR_CUMPRIDA.md",
+    "tags": [
+      "sentença",
+      "extinção do processo",
+      "medida cautelar",
+      "caráter satisfativo",
+      "produção antecipada de prova"
+    ],
+    "descricao": "Modelo de sentença que extingue uma medida cautelar (como produção antecipada de prova) com resolução do mérito, por entender que seu objetivo foi cumprido e a medida teve caráter satisfativo."
+  },
+  {
+    "filename": "INDEFERIMENTO_NULIDADE_E_DETERMINACOES_FINAIS.md",
+    "tags": [
+      "indeferimento",
+      "nulidade processual",
+      "deficiência de defesa",
+      "prejuízo não demonstrado",
+      "alegações finais",
+      "assistente de acusação",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que indefere pedidos da defesa para anular atos processuais por deficiência de defesa, com base na ausência de demonstração de prejuízo concreto, e determina a intimação das partes para alegações finais."
+  },
+  {
+    "filename": "DESPACHO_DESIGNACAO_AUDIENCIA_PRELIMINAR_JECRIM.json",
+    "tags": [
+      "despacho",
+      "audiência preliminar",
+      "JECRIM",
+      "Lei 9.099/95",
+      "TCO",
+      "transação penal"
+    ],
+    "descricao": "Modelo de despacho para designar audiência preliminar em Termo Circunstanciado de Ocorrência (TCO), no rito dos Juizados Especiais Criminais, com as devidas determinações e intimações."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_MEDIDA_PROTETIVA_CRIANCA_ADOLESCENTE_REVOGACAO_PARCIAL.md",
+    "tags": [
+      "sentença",
+      "extinção do processo",
+      "medida protetiva",
+      "criança e adolescente",
+      "lei 13.431/2017",
+      "lei 14.344/2022",
+      "lei henry borel",
+      "revogação parcial"
+    ],
+    "descricao": "Modelo de sentença que extingue o procedimento de medida protetiva em favor de criança/adolescente, revogando parcialmente as medidas para um dos requeridos e mantendo-as por prazo determinado para o outro."
+  },
+  {
+    "filename": "cumprimento mandado de prisão - audiência de custódia - certificar autos e arquivar.md",
+    "tags": [
+      "cumprimento de mandado",
+      "prisão",
+      "arquivamento",
+      "audiência de custódia",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão para arquivamento do expediente de cumprimento de mandado de prisão, após a realização da audiência de custódia, com determinação para juntada das informações nos autos principais."
+  },
+  {
+    "filename": "INDEFERIMENTO_EXAME_TOXICOLOGICO.md",
+    "tags": [
+      "indeferimento",
+      "exame toxicológico",
+      "insanidade mental",
+      "decisão interlocutória",
+      "diligência"
+    ],
+    "descricao": "Modelo de decisão que indefere pedido de exame toxicológico formulado pela defesa, com base na discricionariedade motivada do magistrado e na ausência de dúvida razoável sobre a higidez mental do réu, conforme jurisprudência do STJ."
+  },
+  {
+    "filename": "decisão- receber resposta à acusação - com preliminares - estupro de vulnerável - inépcia da denúncia + justa causa - rejeitar - designar audiência.md",
+    "tags": [
+      "resposta à acusação",
+      "rejeição de preliminares",
+      "inépcia da denúncia",
+      "falta de justa causa",
+      "designação de audiência",
+      "decisão interlocutória"
+    ],
+    "descricao": "Modelo de decisão proferida após a resposta à acusação, que rejeita preliminares de inépcia da denúncia e falta de justa causa, com base em jurisprudência do STJ, e designa audiência de instrução."
+  },
+  {
+    "filename": "INDEFERIMENTO_LIBERDADE_PROVISORIA_EXCESSO_PRAZO_SUMULA_52.md",
+    "tags": [
+      "indeferimento",
+      "liberdade provisória",
+      "excesso de prazo",
+      "súmula 52 stj",
+      "instrução encerrada",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que indefere pedido de liberdade provisória fundado em excesso de prazo, aplicando o entendimento da Súmula 52 do STJ, por já estar encerrada a instrução criminal, pendente apenas a juntada de laudo."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_MEDIDA_PROTETIVA_CRIANCA_ADOLESCENTE.json",
+    "tags": [
+      "sentença",
+      "extinção do processo",
+      "medida protetiva",
+      "criança e adolescente",
+      "lei 13.431/2017",
+      "lei 14.344/2022",
+      "lei henry borel",
+      "caráter satisfativo"
+    ],
+    "descricao": "Modelo de sentença que extingue o procedimento de medida protetiva em favor de criança/adolescente, com resolução de mérito, por entender que a finalidade cautelar foi alcançada, mantendo a validade das medidas por prazo determinado, após intimação da vítima e requerido acerca da concessão da MPU."
+  },
+  {
+    "filename": "CONCESSAO_LIBERDADE_PROVISORIA_COM_CAUTELARES.md",
+    "tags": [
+      "liberdade provisória",
+      "medidas cautelares",
+      "prisão preventiva",
+      "desproporcionalidade",
+      "ANPP",
+      "tráfico de drogas",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que, reavaliando prisão preventiva decretada em audiência de custódia, concede liberdade provisória com medidas cautelares, por entender a custódia desproporcional, considerando a primariedade, a quantidade de droga e a provável incidência do tráfico privilegiado e do ANPP."
+  },
+  {
+    "filename": "ARQUIVAMENTO IP inércia MP- tramite direto entre mp e delegacia.md",
+    "tags": [
+      "arquivamento",
+      "inquérito policial",
+      "inércia do ministério público",
+      "tramitação direta",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que determina o arquivamento de inquérito policial antigo devido à inércia do Ministério Público em oferecer denúncia ou requerer arquivamento, fundamentando na existência de tramitação direta entre MP e Polícia."
+  },
+  {
+    "filename": "MODELO - declinar competência - vara de violência doméstica e familiar contra a mulher da capital - conexão MPU.md",
+    "tags": [
+      "declínio de competência",
+      "conexão instrumental",
+      "violência doméstica",
+      "denunciação caluniosa",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que declina da competência para a Vara de Violência Doméstica em um caso de denunciação caluniosa, com base na conexão instrumental com o processo original de medidas protetivas."
+  },
+  {
+    "filename": "DECLINIO_COMPETENCIA_LEI_MARIA_DA_PENHA - modelo simples.md",
+    "tags": [
+      "declínio de competência",
+      "lei maria da penha",
+      "violência doméstica",
+      "decisão",
+      "prisão em flagrante"
+    ],
+    "descricao": "Modelo de decisão que declina da competência de um flagrante para a Vara de Violência Doméstica e Familiar Contra a Mulher, por reconhecer a incidência da Lei Maria da Penha."
+  },
+  {
+    "filename": ".json",
+    "tags": [
+      "sentença",
+      "extinção do processo",
+      "litispendência",
+      "sentença terminativa"
+    ],
+    "descricao": "Modelo de sentença que extingue o processo sem resolução do mérito devido à litispendência, por já existir outra ação penal sobre os mesmos fatos."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_PUNIBILIDADE_DECADENCIA.md",
+    "tags": [
+      "sentença",
+      "extinção de punibilidade",
+      "decadência",
+      "representação",
+      "ação penal pública condicionada"
+    ],
+    "descricao": "Modelo de sentença que declara a extinção da punibilidade do agente pelo advento da decadência, em crimes de ação penal pública condicionada à representação, quando a vítima não exerce seu direito no prazo legal."
+  },
+  {
+    "filename": "eisão - rejeição parcial da denúncia - tentativa de furto - atos preparatorios - vista mp institutos despenalizadores.md",
+    "tags": [
+      "rejeição parcial",
+      "denúncia",
+      "atos preparatórios",
+      "tentativa de furto",
+      "teoria objetivo-formal",
+      "decisão",
+      "institutos despensalizadores"
+    ],
+    "descricao": "Modelo de decisão que rejeita parcialmente a denúncia quanto ao crime de tentativa de furto, por entender que a conduta narrada (tentativa de arrombar porta) configura mero ato preparatório, com base na teoria objetivo-formal e jurisprudência do STJ."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_PUNIBILIDADE_PRESCRICAO_PUNITIVA.json",
+    "tags": [
+      "sentença",
+      "extinção de punibilidade",
+      "prescrição",
+      "pretensão punitiva"
+    ],
+    "descricao": "Modelo de sentença que declara a extinção da punibilidade do agente pelo advento da prescrição da pretensão punitiva do Estado, antes do oferecimento da denúncia, com providências sobre mandado de prisão e fiança."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_PUNIBILIDADE_SURSIS_PROCESSUAL.md",
+    "tags": [
+      "sentença",
+      "extinção de punibilidade",
+      "sursis processual",
+      "suspensão condicional do processo",
+      "lei 9.099/95"
+    ],
+    "descricao": "Modelo de sentença que declara a extinção da punibilidade do agente em razão do integral cumprimento da Suspensão Condicional do Processo, com base no art. 89, § 5º, da Lei n. 9.099/95."
+  },
+  {
+    "filename": "SENTENCA_HOMOLOGATORIA_TRANSACAO_PENAL.md",
+    "tags": [
+      "sentença homologatória",
+      "transação penal",
+      "lei 9.099/95",
+      "JECRIM",
+      "acordo"
+    ],
+    "descricao": "Modelo de sentença que homologa a transação penal celebrada em audiência, aplicando a medida alternativa acordada e fornecendo instruções para a fiscalização do cumprimento e destinação de valores."
+  },
+  {
+    "filename": "DEFERIMENTO_QUEBRA_SIGILO_BANCARIO_SIMBA.md",
+    "tags": [
+      "quebra de sigilo bancário",
+      "afastamento de sigilo",
+      "investigação criminal",
+      "SIMBA",
+      "LAB-LD",
+      "medida cautelar",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que defere a quebra de sigilo bancário e fiscal de investigados, com determinações detalhadas ao Banco Central e instituições financeiras para envio de dados via sistema SIMBA ao Laboratório de Tecnologia Contra Lavagem de Dinheiro (LAB-LD)."
+  },
+  {
+    "filename": "CUMPRIMENTO_ACORDAO",
+    "tags": [
+      "cumprimento de acórdão",
+      "carta de guia",
+      "regime semiaberto",
+      "regime fechado",
+      "decisão",
+      "execução penal"
+    ],
+    "descricao": "Modelo de decisão para dar cumprimento a acórdão do Tribunal de Justiça, com instruções específicas para a secretaria expedir carta de guia e/ou mandado de prisão, a depender do regime prisional fixado (semiaberto ou fechado)."
+  },
+  {
+    "filename": "SENTENCA_EXTINCAO_PUNIBILIDADE_PRESCRICAO_EXECUTÓRIA.md",
+    "tags": [
+      "sentença",
+      "extinção de punibilidade",
+      "prescrição",
+      "prescrição intercorrente",
+      "pretensão punitiva"
+    ],
+    "descricao": "Modelo de sentença que declara a extinção da punibilidade do agente pelo advento da prescrição da pretensão punitiva na modalidade intercorrente (após o recebimento da denúncia)."
+  },
+  {
+    "filename": "RECEBIMENTO_APELACAO_ART_600_CPP.md",
+    "tags": [
+      "recebimento de apelação",
+      "art. 600 cpp",
+      "razões em segunda instância",
+      "carta de guia provisória",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão para recebimento de recurso de apelação quando a defesa opta por apresentar as razões diretamente no Tribunal, conforme art. 600, § 4º, do CPP."
+  },
+  {
+    "filename": "REJEICAO_DENUNCIA_BUSCA_PESSOAL_ILICITA.md",
+    "tags": [
+      "rejeição de denúncia",
+      "busca pessoal",
+      "prova ilícita",
+      "fundada suspeita",
+      "tráfico de drogas",
+      "STJ",
+      "RHC 158.580/BA"
+    ],
+    "descricao": "Modelo de decisão que rejeita a denúncia por ausência de justa causa, decorrente da ilicitude da prova obtida por meio de busca pessoal ilegal, realizada sem a devida 'fundada suspeita' objetiva, com base na jurisprudência do STJ."
+  },
+  {
+    "filename": "Suscitar conflito negativo de competência - violência contra à mulher - conexão instrumental - remeter TJPE.md",
+    "tags": [
+      "conflito de competência",
+      "conexão probatória",
+      "violência doméstica",
+      "juízo comum",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão para suscitar conflito negativo de competência entre Juízo Criminal Comum e Vara de Violência Doméstica, com base na conexão probatória e instrumental entre os delitos, mesmo que uma das vítimas não seja mulher no contexto da Lei Maria da Penha."
+  },
+  {
+    "filename": "DECISAO_RECEBIMENTO_RESPOSTA_ACUSACAO_REJEITA PRELIMINAR_DETERMINAR_DESIGNAÇÃO_AUDIÊNCIA.MD",
+    "tags": [
+      "resposta à acusação",
+      "absolvição sumária",
+      "rejeição de preliminar",
+      "designação de audiência",
+      "decisão interlocutória"
+    ],
+    "descricao": "Modelo de decisão proferida após a resposta à acusação, que rejeita o pedido de absolvição sumária por entender necessária a instrução processual para o esclarecimento dos fatos, e designa audiência."
+  },
+  {
+    "filename": "DECISAO_RECEBIMENTO_RESPOSTA_A_ACUSACAO_REJEICAO_PRELIMINARES_ANPP_PRESCRICAO.md",
+    "tags": [
+      "resposta à acusação",
+      "rejeição de preliminares",
+      "ANPP",
+      "prescrição",
+      "decisão interlocutória",
+      "designação de audiência"
+    ],
+    "descricao": "Modelo de decisão proferida após a resposta à acusação, que rejeita preliminares de prescrição e cabimento de ANPP (previamente descumprido), e designa audiência de instrução."
+  },
+  {
+    "filename": "RECEBIMENTO_DE_APELACAO.json",
+    "tags": [
+      "recebimento de apelação",
+      "recurso",
+      "decisão",
+      "carta de guia provisória",
+      "réu preso",
+      "processual"
+    ],
+    "descricao": "Modelo de decisão para recebimento de recurso de apelação, com instruções para a secretaria e previsão para expedição de carta de guia provisória em caso de réu preso."
+  },
+  {
+    "filename": "ARQUIVAMENTO_IP_TCO_ACOLHENDO_MP.md",
+    "tags": [
+      "arquivamento",
+      "inquérito policial",
+      "TCO",
+      "promoção ministerial",
+      "decisão",
+      "art. 28 cpp"
+    ],
+    "descricao": "Modelo de decisão que acolhe a promoção do Ministério Público e determina o arquivamento de Inquérito Policial ou Termo Circunstanciado de Ocorrência, adotando os fundamentos ministeriais como razão de decidir."
+  },
+  {
+    "filename": "modelo - cobrar a cemando devolução de expediente.md",
+    "tags": [
+      "despacho",
+      "cobrança de mandado",
+      "CEMANDO",
+      "cumprimento de ordem",
+      "processual"
+    ],
+    "descricao": "Modelo de despacho para cobrar a devolução de mandado não cumprido pela Central de Mandados (CEMANDO), com previsão de comunicação à Corregedoria em caso de inércia."
+  },
+  {
+    "filename": "INDEFERIMENTO_HABILITACAO_ASSISTENTE_ACUSACAO.md",
+    "tags": [
+      "assistente de acusação",
+      "habilitação",
+      "indeferimento",
+      "decisão interlocutória",
+      "fase pré-processual"
+    ],
+    "descricao": "Modelo de decisão que indefere o pedido de habilitação de advogado como assistente de acusação, seja por ser em momento processual inadequado (antes da ação penal), seja por ausência de poderes especiais na procuração."
+  },
+  {
+    "filename": "DEFERIMENTO_MEDIDAS_PROTETIVAS_CRIANCA_ADOLESCENTE_LEI_HENRY_BOREL.json",
+    "tags": [
+      "medida protetiva",
+      "criança e adolescente",
+      "lei 14.344/2022",
+      "lei henry borel",
+      "violência doméstica",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão para deferimento de medidas protetivas de urgência em favor de criança(s) e/ou adolescente(s) vítima(s) de violência doméstica, com base na Lei n. 13.431/2017 e na Lei n. 14.344/2022 (Lei Henry Borel)."
+  },
+  {
+    "filename": "MODELO - extinção PAP sem resolução do mérito - vitima não localizada.md",
+    "tags": [
+      "extinção do processo",
+      "perda de objeto",
+      "produção antecipada de prova",
+      "vítima não localizada",
+      "sentença terminativa"
+    ],
+    "descricao": "Modelo de sentença que extingue, sem resolução de mérito, uma ação cautelar de produção antecipada de prova devido à perda do objeto, uma vez que a vítima não foi localizada para a realização do depoimento."
+  },
+  {
+    "filename": "decisão - indeferimento de liberdade provisória - não demonstrada imprescindibilidade da presença do pai com os filhos - reincidente especifico e quantidade de droga.md",
+    "tags": [
+      "revogação de prisão",
+      "prisão preventiva",
+      "prisão domiciliar",
+      "indeferimento",
+      "tráfico de drogas",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão que indefere pedido de revogação de prisão preventiva e/ou substituição por domiciliar, com base na ausência de comprovação da imprescindibilidade do réu para o cuidado dos filhos e na manutenção dos fundamentos da custódia (garantia da ordem pública e risco de reiteração)."
   }
 ]
