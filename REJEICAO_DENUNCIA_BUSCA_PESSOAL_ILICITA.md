@@ -1,4 +1,4 @@
-Com base no JSON fornecido, realizei a catalogação completa, adicionando metadados e ajustando o conteúdo para seguir estritamente as regras de formatação e estilo. O resultado está no formato JSON válido abaixo.
+
 
 ```json
 {
