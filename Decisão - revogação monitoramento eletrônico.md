@@ -1,51 +1,40 @@
+Com base no JSON fornecido, realizei a catalogação completa, adicionando metadados, e ajustei o conteúdo para seguir estritamente as regras de formatação e estilo, principalmente eliminando listas numeradas e corrigindo o fecho da decisão. O resultado está no formato JSON válido abaixo.
 
+```json
 {
-  "titulo": "DECISÃO (REVOGAÇÃO DE MONITORAMENTO ELETRÔNICO)",
-  "instrucao_llm": "Gerar decisão judicial com base nos blocos a seguir. Blocos 'fixo' devem ser reproduzidos literalmente. Blocos 'adaptavel' devem ser usados como base, e o conteúdo adaptado ao caso concreto (especialmente nomes, datas e a fundamentação fática).",
+  "filename": "DESPACHO_DESIGNACAO_AUDIENCIA_PRELIMINAR_JECRIM.json",
+  "tags": [
+    "despacho",
+    "audiência preliminar",
+    "JECRIM",
+    "Lei 9.099/95",
+    "TCO",
+    "transação penal"
+  ],
+  "descricao": "Modelo de despacho para designar audiência preliminar em Termo Circunstanciado de Ocorrência (TCO), no rito dos Juizados Especiais Criminais, com as devidas determinações e intimações.",
+  "titulo": "DESIGNAÇÃO DE AUDIÊNCIA PRELIMINAR (JECRIM)",
+  "instrucao_llm": "Gerar decisão judicial com base nos blocos a seguir. Blocos 'fixo' devem ser reproduzidos literalmente. Blocos 'adaptavel' devem ser usados como base, e o conteúdo adaptado ao caso concreto.",
   "estrutura_decisao": [
     {
       "tipo": "adaptavel",
-      "identificador": "abertura_e_identificacao",
-      "conteudo_base": "DECISÃO\n\nTrata-se de medida cautelar imposta ao réu **{NOME_REU}**, que atualmente se encontra sob monitoramento eletrônico."
+      "identificador": "relatorio_identificacao",
+      "conteudo_base": "Trata-se de Termo Circunstanciado de Ocorrência (TCO) lavrado em desfavor do(a) Autor(a) do Fato, {NOME_AUTOR_FATO}, devidamente qualificado(a) nos autos, pela suposta prática da infração penal de menor potencial ofensivo."
     },
     {
       "tipo": "fixo",
-      "conteudo": "É sabido que o monitoramento eletrônico é uma medida de vigilância que afeta os direitos fundamentais do acusado, especialmente no que se refere à sua intangibilidade corporal e ao direito à saúde física. A aplicação dessa medida pode ser isolada ou cumulativa com outras medidas, como a proibição de acesso a determinados lugares (art. 319, II, CPP), a proibição de ausentar-se da comarca (art. 319, IV, CPP), o recolhimento domiciliar noturno (art. 319, V, CPP) ou a proibição de ausentar-se do país (art. 320, CPP), além da própria prisão domiciliar (art. 318, CPP).\n\nConforme os requisitos do **art. 282 do CPP**, as medidas cautelares devem ser aplicadas com base na necessidade para aplicação da lei penal, para a investigação ou instrução criminal, ou para evitar a prática de infrações penais (art. 282, I). Além disso, deve haver adequação da medida à gravidade do crime, às circunstâncias do fato e às condições pessoais do acusado (art. 282, II)."
-    },
-    {
-      "tipo": "adaptavel",
-      "identificador": "fundamentacao_caso_concreto",
-      "conteudo_base": "No caso concreto, apesar da gravidade dos fatos narrados na denúncia, não há elementos que demonstrem a necessidade de monitoramento eletrônico para garantir a aplicação da lei penal ou para evitar novas infrações, considerando que se trata de réu primário, com residência fixa, devidamente citado nos autos e, em suma, não vem apresentando embaraços à marcha processual."
-    },
-    {
-      "tipo": "adaptavel",
-      "identificador": "conclusao_fundamentacao",
-      "conteudo_base": "Assim, a manutenção do monitoramento eletrônico se revela desproporcional e inadequada ao caso. **Não há elementos que indiquem risco à aplicação da lei penal** ou à investigação criminal que justifiquem a manutenção de tal medida restritiva."
+      "identificador": "fundamentacao_rito_jecrim",
+      "conteudo": "O presente TCO foi encaminhado a este Juízo pela Autoridade Policial, acompanhado das peças informativas pertinentes.\n\nEm análise preliminar, verifico que o fato noticiado se amolda, em tese, a uma infração de menor potencial ofensivo, conforme definição do art. 61 da Lei n. 9.099/1995.\n\nA fase inaugural do procedimento nos Juizados Especiais Criminais visa, primordialmente, à conciliação e, sendo o caso, à transação penal, nos termos dos artigos 72 e 76 da Lei n. 9.099/1995. Para tanto, é indispensável a designação de audiência preliminar, na qual as partes envolvidas terão a oportunidade de buscar uma solução consensual para o conflito."
     },
     {
       "tipo": "fixo",
-      "conteudo": "Ademais, os custos relacionados ao monitoramento eletrônico não são desprezíveis, podendo variar entre **R$ 167,00 e R$ 660,00** mensais por pessoa monitorada, sendo a média de **R$ 301,25**. A medida cautelar de monitoramento eletrônico é comumente aplicada em situações mais graves, como, por exemplo, para proteção de vítimas ou como no âmbito de **medidas protetivas de urgência.** [^1]"
-    },
-    {
-      "tipo": "adaptavel",
-      "identificador": "dispositivo_revogacao",
-      "conteudo_base": "Ante o exposto, **revogo a medida cautelar de monitoramento eletrônico** anteriormente imposta ao réu **{NOME_REU},** pois, em menor medida, tolhe a liberdade do indivíduo."
-    },
-    {
-      "tipo": "adaptavel",
-      "identificador": "determinacao_retirada",
-      "conteudo_base": "Determino que se providencie o necessário para a **retirada do equipamento de monitoramento eletrônico do acusado**, junto ao **CEMEP**."
-    },
-    {
-      "tipo": "fixo",
-      "conteudo": "**Intimem-se. Cumpra-se com urgência.**"
+      "identificador": "determinacoes_e_intimacoes",
+      "conteudo": "Diante do exposto, e com fundamento nos artigos 69 e seguintes da Lei n. 9.099/1995, determino que se abra vista ao Ministério Público para manifestação e oferecimento de proposta de transação penal. Caso o MP requeira algo diverso da designação de audiência, voltem-me os autos conclusos para deliberação.\n\nApós, designe-se audiência preliminar, oportunidade para composição civil das partes e, sendo infrutífera, transação penal.\n\nIntime-se o(a) autor(a) do fato, no endereço constante nos autos, para comparecer à audiência designada, devendo estar acompanhado(a) de advogado(a). Na intimação, deverá constar a advertência de que, caso não possua condições de constituir um(a) defensor(a), ser-lhe-á nomeado(a) Defensor(a) Público(a) ou dativo(a) para o ato. Informe-se, ainda, que seu comparecimento é fundamental para que possa se beneficiar das medidas despenalizadoras previstas na Lei n. 9.099/1995, e que a ausência injustificada poderá ensejar o prosseguimento do feito com o encaminhamento dos autos ao Ministério Público para análise de eventual oferecimento de denúncia.\n\nIntime-se também a(s) vítima(s), se houver e for identificada, no endereço constante nos autos, para comparecer à audiência, cientificando-a(s) da possibilidade de composição dos danos civis e, se o caso de infração penal de ação penal pública condicionada à representação ou de ação penal privada, do direito de oferecer representação ou queixa-crime, e do respectivo prazo decadencial.\n\nDê-se ciência ao Ministério Público e à Defensoria Pública.\n\nDiligências e intimações necessárias."
     },
     {
       "tipo": "adaptavel",
       "identificador": "fecho_assinatura",
-      "conteudo_base": "{LOCALIDADE}, {DATA_ASSINATURA}\n\n**{NOME_JUIZ}**\n\nJuiz de Direito"
-    },
-    {
-      "tipo": "fixo",
-      "identificador": "nota_de_rodape",
-      "conteudo_base": "[^1]: 2. <<Quanto à necessidade do monitoramento eletrônico estar associado à medida de recolhimento noturno e nos dias de folga para fins da detração da pena de que aqui se cuida, tem-se que o monitoramento eletrônico (ME) é medida de vigilância, que afeta os direitos fundamentais, destacadamente a intangibilidade corporal do acusado. É possível sua aplicação isolada ou cumulativamente com outra medida. Essa medida é pouco difundida no Brasil, em razão do alto custo ou, ainda, de dúvidas quanto a sua efetividade. Outro aspecto importante é o fato de que seu empreg o prevalece em fases de execução da pena (80%), ou seja, não se destina primordialmente à substituição da prisão preventiva. (STJ. REsp n. 1.977.135/SC, relator Ministro Joel Ilan Paciornik, Terceira Seção, julgado em 23/11/2022, DJe de 28/11/2022
+      "conteudo_base": "{LOCALIDADE}, data da assinatura eletrônica.\n\n**Lucas Tavares Coutinho**\nJuiz de Direito"
+    }
+  ]
+}
+```
