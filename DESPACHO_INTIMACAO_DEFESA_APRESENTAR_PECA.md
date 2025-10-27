@@ -1,4 +1,3 @@
-Com base no despacho fornecido, realizei a catalogação, identificando os blocos fixos e adaptáveis, e aplicando todas as regras de formatação e estilo. O resultado está no formato JSON abaixo.
 
 ```json
 {
