@@ -1,4 +1,3 @@
-Com base na decisão fornecida, realizei a catalogação, identificando os blocos e separando as instruções condicionais para casos de réu preso e réu solto. O resultado está no formato JSON abaixo, seguindo todas as regras de formatação e estilo.
 
 ```json
 {
