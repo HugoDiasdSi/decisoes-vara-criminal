@@ -47,10 +47,11 @@ O sistema possui acesso a mais de **70 minutas** de decisões judiciais, incluin
 ## 🔧 Tecnologias Utilizadas
 
 - **Interface:** Gradio
-- **IA:** Google Gemini 1.5 Pro
+- **IA:** Google Gemini 2.0 Flash (Tier Free - 125 TPM)
 - **Embeddings:** BERT em Português (neuralmind/bert-base-portuguese-cased)
 - **PDF Processing:** PyPDF2, pdf2image, pytesseract
 - **RAG:** sentence-transformers, scikit-learn
+- **Rate Limiting:** Sistema automático de controle de requisições
 
 ## 📖 Como Usar
 
@@ -64,6 +65,9 @@ Valor: sua-api-key-aqui
 ```
 
 [Como obter uma API Key do Gemini](https://ai.google.dev/)
+
+⚠️ **Tier Free:** O aplicativo está configurado para usar o Gemini 2.0 Flash com tier gratuito (125 TPM).
+O sistema inclui rate limiting automático para respeitar os limites da API.
 
 ### 2. Upload dos Autos
 

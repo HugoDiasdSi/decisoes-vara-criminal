@@ -142,6 +142,40 @@ def test_prompt_builder():
         return False
 
 
+def test_rate_limiter():
+    """Testa o rate limiter"""
+    print("\n🔍 Testando Rate Limiter...")
+
+    try:
+        from utils import RateLimiter
+
+        # Criar rate limiter de teste
+        limiter = RateLimiter(tokens_per_minute=1000)
+
+        # Testar estimativa de tokens
+        text = "Este é um texto de teste para estimar tokens."
+        tokens = limiter.estimate_tokens(text)
+
+        if tokens > 0:
+            print(f"  ✓ Estimativa de tokens funcionando: {tokens} tokens")
+        else:
+            print("  ✗ Estimativa de tokens retornou 0")
+            return False
+
+        # Testar status
+        status = limiter.get_status()
+        if 'tokens_remaining' in status and 'tpm_limit' in status:
+            print(f"  ✓ Status: {status['tokens_remaining']}/{status['tpm_limit']} tokens disponíveis")
+            return True
+        else:
+            print("  ✗ Status incompleto")
+            return False
+
+    except Exception as e:
+        print(f"  ✗ Erro no rate limiter: {e}")
+        return False
+
+
 def test_api_key():
     """Verifica se a API key está configurada"""
     print("\n🔍 Verificando API Key do Gemini...")
@@ -169,6 +203,7 @@ def main():
         "Sistema RAG": test_rag_system(),
         "Metadados": test_metadata_loading(),
         "Prompt Builder": test_prompt_builder(),
+        "Rate Limiter": test_rate_limiter(),
         "API Key": test_api_key()
     }
 

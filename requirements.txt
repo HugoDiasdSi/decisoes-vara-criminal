@@ -16,6 +16,7 @@ torch==2.1.2
 # NLP & Embeddings
 scikit-learn==1.4.0
 numpy==1.26.3
+tiktoken==0.5.2
 
 # Utilities
 python-dotenv==1.0.1

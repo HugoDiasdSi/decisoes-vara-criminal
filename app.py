@@ -12,6 +12,7 @@ import google.generativeai as genai
 from utils.pdf_extractor import extract_text_from_pdf
 from utils.rag_system import RAGSystem
 from utils.prompt_builder import build_full_prompt
+from utils.rate_limiter import RateLimiter, retry_with_exponential_backoff
 
 # Configuração da API do Gemini
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
@@ -20,6 +21,10 @@ if GEMINI_API_KEY:
 
 # Inicializar sistema RAG
 rag_system = RAGSystem()
+
+# Inicializar rate limiter (Gemini 2.0 Flash tier free: 15 RPM e 1M TPM)
+# Sendo conservador com 125 TPM como mencionado pelo usuário
+rate_limiter = RateLimiter(tokens_per_minute=125)
 
 def load_knowledge_base():
     """Carrega todas as minutas e metadados no sistema RAG"""
@@ -110,9 +115,35 @@ def process_case(pdf_files, task_description, user_context=""):
         # ETAPA 4: Processar com Gemini
         status_msg += "\n🤖 Processando com IA (isso pode levar alguns minutos)...\n"
 
-        model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        # Estimar tokens e aplicar rate limiting
+        estimated_tokens = rate_limiter.estimate_tokens(full_prompt)
+        status_msg += f"📊 Tokens estimados: ~{estimated_tokens}\n"
 
-        # Configuração para respostas longas
+        # Verificar se excede o limite
+        if estimated_tokens > 30000:  # Gemini 2.0 Flash aceita até 1M tokens, mas vamos ser conservadores
+            status_msg += "⚠️ Prompt muito grande, otimizando...\n"
+            # Reduzir conteúdo das minutas se necessário
+            for minuta in relevant_minutas:
+                if len(minuta['content']) > 3000:
+                    minuta['content'] = minuta['content'][:3000] + "\n\n[... conteúdo truncado ...]"
+
+            # Reconstruir prompt
+            full_prompt = build_full_prompt(
+                autos_text=full_text[:15000] if len(full_text) > 15000 else full_text,
+                task=task_description,
+                context=user_context,
+                relevant_minutas=relevant_minutas
+            )
+            estimated_tokens = rate_limiter.estimate_tokens(full_prompt)
+            status_msg += f"✓ Prompt otimizado: ~{estimated_tokens} tokens\n"
+
+        # Aplicar rate limiting
+        rate_limiter.wait_if_needed(estimated_tokens)
+
+        # Usar Gemini 2.0 Flash (tier free)
+        model = genai.GenerativeModel('gemini-2.0-flash-exp')
+
+        # Configuração otimizada para tier free
         generation_config = {
             "temperature": 0.3,
             "top_p": 0.95,
@@ -120,10 +151,16 @@ def process_case(pdf_files, task_description, user_context=""):
             "max_output_tokens": 8192,
         }
 
-        response = model.generate_content(
-            full_prompt,
-            generation_config=generation_config
-        )
+        # Função com retry
+        @retry_with_exponential_backoff
+        def generate_with_retry():
+            return model.generate_content(
+                full_prompt,
+                generation_config=generation_config
+            )
+
+        # Gerar resposta com retry automático
+        response = generate_with_retry()
 
         # ETAPA 5: Formatar resposta
         result = f"""
@@ -168,6 +205,9 @@ def create_interface():
         2. Descreva a tarefa que deseja realizar
         3. Adicione contexto adicional se necessário
         4. Clique em "Processar" e aguarde a análise
+
+        ⏱️ **Tier Free**: Este app usa Gemini 2.0 Flash tier gratuito (125 TPM).
+        Pode haver tempo de espera entre requisições para respeitar os limites da API.
         """)
 
         with gr.Row():
@@ -214,11 +254,15 @@ def create_interface():
 
         - **Sistema RAG**: Utiliza Retrieval-Augmented Generation para buscar minutas relevantes
         - **Base de conhecimento**: Mais de 70 minutas de decisões judiciais
-        - **Modelo de IA**: Google Gemini 1.5 Pro
+        - **Modelo de IA**: Google Gemini 2.0 Flash (Tier Free - 125 TPM)
         - **OCR**: Suporta PDFs digitalizados e nativos
+        - **Rate Limiting**: Sistema automático de controle de taxa para respeitar limites da API
 
         ⚠️ **Aviso Legal**: Este sistema é uma ferramenta de apoio. Todas as decisões devem ser revisadas
         por um magistrado antes de serem publicadas.
+
+        ⏳ **Tempo de Processamento**: Devido aos limites do tier gratuito, o processamento pode levar
+        alguns minutos, especialmente para PDFs grandes ou múltiplos autos.
 
         📚 **Base de Conhecimento**: [GitHub Repository](https://github.com/HugoDiasdSi/decisoes-vara-criminal)
         """)
