@@ -2,9 +2,57 @@
 
 Este repositório agora está adaptado para ser usado como um **Gem (assistente personalizado)** no **Google Gemini 3.0 Pro**.
 
+## 🎯 Dois Modos Disponíveis
+
+### 🚀 MODO DIRETO (RECOMENDADO)
+**Para quem quer velocidade**: Anexa PDF → Recebe Decisão
+
+**Arquivo**: `GEM_INSTRUCOES_SIMPLES_PDF_DIRETO.md`
+- ✅ Máxima autonomia - Gem identifica tudo sozinho
+- ✅ Sem templates complicados
+- ✅ Mínimo de perguntas
+- ✅ Fluxo ultrarrápido
+- 📖 Guia: `GUIA_RAPIDO_MODO_DIRETO.md`
+
+### 📋 MODO COMPLETO (CONTROLE TOTAL)
+**Para quem quer controle detalhado**: Template estruturado → Decisão
+
+**Arquivo**: `GEM_INSTRUCOES_OTIMIZADO_GEMINI_3_PRO.md`
+- ✅ Controle total sobre cada etapa
+- ✅ Validação passo a passo
+- ✅ Ideal para casos complexos
+- 📖 Guia: `GEM_GUIA_USO_GEMINI.md`
+
+---
+
 ## 📂 Arquivos Criados para o Gem
 
-### 1. **GEM_INSTRUCOES_OTIMIZADO_GEMINI_3_PRO.md** ⭐ PRINCIPAL
+### 🚀 MODO DIRETO
+
+#### 1. **GEM_INSTRUCOES_SIMPLES_PDF_DIRETO.md** ⭐ RECOMENDADO
+**O que é**: Instruções otimizadas para fluxo direto (PDF → Decisão)
+**Como usar**: Cole no Gemini para criar Gem ultrarrápido
+**Características**:
+- ✅ Análise automática de PDFs
+- ✅ Identificação automática do tipo de decisão
+- ✅ Geração automática sem perguntas excessivas
+- ✅ Apenas 3 perguntas essenciais (juiz, localidade, tipo)
+- ✅ Formatação automática conforme regras
+
+#### 2. **GUIA_RAPIDO_MODO_DIRETO.md**
+**O que é**: Guia rápido do modo direto (2 minutos de leitura)
+**Para quem**: Quem quer começar imediatamente
+**Conteúdo**:
+- Como configurar em 2 minutos
+- Como usar em 3 passos
+- Exemplos práticos
+- Solução rápida de problemas
+
+---
+
+### 📋 MODO COMPLETO
+
+#### 3. **GEM_INSTRUCOES_OTIMIZADO_GEMINI_3_PRO.md**
 **O que é**: Instruções completas otimizadas para o Gemini 3.0 Pro
 **Como usar**: Cole este arquivo COMPLETO no campo de instruções ao criar seu Gem
 **Características**:
@@ -15,14 +63,14 @@ Este repositório agora está adaptado para ser usado como um **Gem (assistente 
 - ✅ Anti-injection de prompts
 - ✅ Checklist de qualidade integrado
 
-### 2. **GEM_INSTRUCOES_GEMINI.md**
+#### 4. **GEM_INSTRUCOES_GEMINI.md**
 **O que é**: Versão simplificada das instruções
 **Como usar**: Alternativa mais curta se a versão otimizada for muito longa
 **Quando usar**: Se o Gemini reclamar de instruções muito longas (improvável no 3.0 Pro)
 
-### 3. **GEM_GUIA_USO_GEMINI.md**
-**O que é**: Guia completo de como usar o Gem
-**Para quem**: Usuário que vai criar e usar o Gem
+#### 5. **GEM_GUIA_USO_GEMINI.md**
+**O que é**: Guia completo de como usar o Gem (modo completo)
+**Para quem**: Usuário que quer controle total
 **Conteúdo**:
 - Passo a passo para criar o Gem
 - Como estruturar consultas
@@ -30,22 +78,39 @@ Este repositório agora está adaptado para ser usado como um **Gem (assistente 
 - Solução de problemas
 - Limitações e capacidades
 
-### 4. **GEM_CONTEXTO_BASE.md**
+#### 6. **GEM_CONTEXTO_BASE.md**
 **O que é**: Template para estruturar consultas
 **Como usar**: Copie e cole, preenchendo com dados do seu caso
 **Benefício**: Garante que você forneça todas as informações necessárias
 
-## 🚀 Início Rápido (3 Passos)
+## 🚀 Início Rápido
 
-### Passo 1: Criar o Gem
+### Modo Direto (30 segundos) ⚡ RECOMENDADO
+
+```
+1. gemini.google.com → Gems → Criar novo Gem
+2. Nome: "Decisões - Direto"
+3. Cole: GEM_INSTRUCOES_SIMPLES_PDF_DIRETO.md
+4. Salvar
+5. Anexar PDFs do processo
+6. Pronto! (Gem gera decisão automaticamente)
+```
+
+📖 **Guia completo**: `GUIA_RAPIDO_MODO_DIRETO.md`
+
+---
+
+### Modo Completo (3 Passos) 📋
+
+#### Passo 1: Criar o Gem
 1. Acesse [gemini.google.com](https://gemini.google.com)
 2. Clique em **"Gems"** (menu lateral)
 3. Clique em **"Criar novo Gem"**
-4. Nome: **"Assessor Jurídico Criminal"**
+4. Nome: **"Assessor Jurídico Criminal - Completo"**
 5. **Cole todo o conteúdo** do arquivo `GEM_INSTRUCOES_OTIMIZADO_GEMINI_3_PRO.md`
 6. Salve
 
-### Passo 2: Preparar seu Caso
+#### Passo 2: Preparar seu Caso
 1. Abra o arquivo `GEM_CONTEXTO_BASE.md`
 2. Copie o template
 3. Preencha com os dados do seu processo:
@@ -55,7 +120,7 @@ Este repositório agora está adaptado para ser usado como um **Gem (assistente 
    - Selecione 2-3 minutas relevantes do repositório
    - Adicione jurisprudência (se houver)
 
-### Passo 3: Usar o Gem
+#### Passo 3: Usar o Gem
 1. Abra o Gem que você criou
 2. **Opção A - Com template**:
    - Cole o contexto preenchido do Passo 2
@@ -64,6 +129,8 @@ Este repositório agora está adaptado para ser usado como um **Gem (assistente 
    - Anexe PDFs do processo
    - Anexe 1-3 minutas de referência
    - Escreva: "Elaborar decisão de [tipo] baseado nos documentos anexos"
+
+📖 **Guia completo**: `GEM_GUIA_USO_GEMINI.md`
 
 ## 📋 Exemplo de Uso Completo
 
