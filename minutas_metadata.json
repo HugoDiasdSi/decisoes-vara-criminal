@@ -94,6 +94,20 @@
     "descricao": "Modelo de decisão proferida após a resposta à acusação, que rejeita preliminares de prescrição e cabimento de ANPP (previamente descumprido), e designa audiência de instrução."
   },
   {
+    "filename": "DECISAO_EXPEDICAO_GUIA_DEFINITIVA_APOS_CUMPRIMENTO_MANDADO_PRISAO.md",
+    "tags": [
+      "guia de recolhimento definitiva",
+      "carta de guia",
+      "cumprimento de mandado de prisão",
+      "trânsito em julgado",
+      "execução penal",
+      "regime fechado",
+      "arquivamento",
+      "decisão"
+    ],
+    "descricao": "Modelo de decisão proferida nos autos principais já sentenciados e transitados em julgado que, diante da notícia de cumprimento do mandado de prisão definitiva, determina a expedição da guia de recolhimento definitiva, sua remessa ao juízo da execução penal por malote digital e o subsequente arquivamento dos autos."
+  },
+  {
     "filename": "DECISÃO - DESIGNAÇÃO DE AUDIÊNCIA PRELIMINAR - JECRIM- tco - designar transação penal.md",
     "tags": [
       "despacho",

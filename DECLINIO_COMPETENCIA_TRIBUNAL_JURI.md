@@ -10,7 +10,7 @@
     "incompetência",
     "decisão"
   ],
-  "descricao": "Modelo de decisão que declina da competência de um flagrante para a vara do júri (1ª Vara Criminal), por se tratar de crime doloso contra a vida.",
+  "descricao": "Modelo de decisão que declina da competência de um flagrante para a vara do júri (1ª Vara Criminal), por se tratar de crime doloso contra a vida. Versão para comunicação de prisão em flagrante; quando o declínio se der em inquérito ou em outra fase, usar DECLINIO_COMPETENCIA_TRIBUNAL_JURI_QUALQUER_FASE. Em qualquer hipótese, crime doloso contra a vida declina ao júri independentemente da fase do feito.",
   "titulo": "DECLÍNIO DE COMPETÊNCIA (CRIME DOLOSO CONTRA A VIDA)",
   "instrucao_llm": "Gerar decisão judicial com base nos blocos a seguir. Blocos 'fixo' devem ser reproduzidos literalmente. Blocos 'adaptavel' devem ser usados como base, e o conteúdo adaptado ao caso concreto. Blocos 'condicional' só devem ser incluídos se a condição descrita no 'identificador' ou 'descricao' for aplicável, e seu conteúdo deve ser adaptado.",
   "estrutura_decisao": [
