@@ -865,5 +865,17 @@
       "fase pré-processual"
     ],
     "descricao": "Modelo de decisão que indefere o pedido de habilitação de advogado como assistente de acusação, seja por ser em momento processual inadequado (antes da ação penal), seja por ausência de poderes especiais na procuração."
+  },
+  {
+    "filename": "DESPACHO_VISTA_AO_MP.md",
+    "tags": [
+      "despacho",
+      "vista ao MP",
+      "ministério público",
+      "expediente",
+      "diligência frustrada",
+      "ônus da acusação"
+    ],
+    "descricao": "Modelo canônico de despacho de expediente que abre vista ao Ministério Público. Peça sucinta: registra em uma frase o fato que motiva a remessa e determina a vista. Não comporta relatório, fundamentação, nem delimitação do que o órgão ministerial deve enfrentar."
   }
 ]
