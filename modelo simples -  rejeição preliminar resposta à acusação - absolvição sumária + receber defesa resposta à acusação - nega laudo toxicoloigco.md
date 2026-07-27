@@ -31,7 +31,7 @@
     },
     {
       "tipo": "fixo",
-      "conteudo": "Determino à Secretaria que **designe data para a audiência de instrução e julgamento**, oportunidade em que haverá inquirição das testemunhas arroladas pela acusação e pela defesa, ficando ressalvado que as testemunhas indicadas pelo(s) réu(s) deverão comparecer independentemente de intimação, salvo a hipótese de requerimento expresso, devidamente fundamentado, justificando tal impossibilidade, tendo em vista o disposto na parte final do art. 396-A do CPP, e interrogatório do acusado."
+      "conteudo": "Designo o dia __/__/____ para a realização da audiência de instrução e julgamento, oportunidade em que haverá inquirição das testemunhas arroladas pela acusação e pela defesa, ficando ressalvado que as testemunhas indicadas pelo(s) réu(s) deverão comparecer independentemente de intimação, salvo a hipótese de requerimento expresso, devidamente fundamentado, justificando tal impossibilidade, tendo em vista o disposto na parte final do art. 396-A do CPP, e interrogatório do acusado."
     },
     {
       "tipo": "fixo",

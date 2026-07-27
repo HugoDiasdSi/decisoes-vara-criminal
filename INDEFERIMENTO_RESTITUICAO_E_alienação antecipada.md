@@ -49,7 +49,7 @@
     {
       "tipo": "fixo",
       "identificador": "designacao_audiencia_instrucao",
-      "conteudo": "Determino à Secretaria que designe data para a audiência de instrução e julgamento, oportunidade em que haverá inquirição das testemunhas arroladas pela acusação e pela defesa, ficando ressalvado que as testemunhas indicadas pelo réu deverão comparecer independentemente de intimação, salvo a hipótese de requerimento expresso, devidamente fundamentado, justificando tal impossibilidade, tendo em vista o disposto na parte final do art. 396-A do CPP, e interrogatório do acusado.\n\nAo intimar o defensor do acusado, informem-no de que poderá substituir a inquirição de testemunhas de referência por juntada de declaração de conduta, cujo formulário padrão poderá ser adquirido na secretaria desta Vara."
+      "conteudo": "Designo o dia __/__/____ para a realização da audiência de instrução e julgamento, oportunidade em que haverá inquirição das testemunhas arroladas pela acusação e pela defesa, ficando ressalvado que as testemunhas indicadas pelo réu deverão comparecer independentemente de intimação, salvo a hipótese de requerimento expresso, devidamente fundamentado, justificando tal impossibilidade, tendo em vista o disposto na parte final do art. 396-A do CPP, e interrogatório do acusado.\n\nAo intimar o defensor do acusado, informem-no de que poderá substituir a inquirição de testemunhas de referência por juntada de declaração de conduta, cujo formulário padrão poderá ser adquirido na secretaria desta Vara."
     },
     {
       "tipo": "fixo",

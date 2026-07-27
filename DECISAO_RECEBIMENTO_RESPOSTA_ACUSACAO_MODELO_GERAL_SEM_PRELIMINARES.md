@@ -21,7 +21,7 @@
     },
     {
       "tipo": "fixo",
-      "conteudo": "Determino à Secretaria que **designe data para a audiência de instrução e julgamento**, oportunidade em que haverá inquirição das testemunhas arroladas pela acusação e pela defesa e interrogatório do acusado.\n\nAo intimar o defensor do acusado, informem-no de que poderá substituir a inquirição de testemunhas de referência por juntada de declaração de conduta, cujo formulário padrão poderá ser adquirido na secretaria desta Vara.\n\nA Diretoria deve, ainda, providenciar a juntada das perícias necessárias que ainda não estejam acostadas aos autos.\n\nIntimações e diligências necessárias.\n\nCiência ao Ministério Público e ao defensor."
+      "conteudo": "Designo o dia __/__/____ para a realização da audiência de instrução e julgamento, oportunidade em que haverá inquirição das testemunhas arroladas pela acusação e pela defesa e interrogatório do acusado.\n\nAo intimar o defensor do acusado, informem-no de que poderá substituir a inquirição de testemunhas de referência por juntada de declaração de conduta, cujo formulário padrão poderá ser adquirido na secretaria desta Vara.\n\nA Diretoria deve, ainda, providenciar a juntada das perícias necessárias que ainda não estejam acostadas aos autos.\n\nIntimações e diligências necessárias.\n\nCiência ao Ministério Público e ao defensor."
     },
     {
       "tipo": "condicional",
