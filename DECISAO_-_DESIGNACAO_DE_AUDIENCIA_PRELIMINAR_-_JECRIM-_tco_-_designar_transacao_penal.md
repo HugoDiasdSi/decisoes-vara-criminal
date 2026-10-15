@@ -1,0 +1,47 @@
+Com base no JSON fornecido, realizei a catalogação completa, adicionando metadados, e ajustei o conteúdo para seguir estritamente as regras de formatação e estilo, principalmente eliminando listas numeradas e corrigindo o fecho da decisão. O resultado está no formato JSON válido abaixo.
+
+```json
+{
+  "filename": "DESPACHO_DESIGNACAO_AUDIENCIA_PRELIMINAR_JECRIM.json",
+  "tags": [
+    "despacho",
+    "audiência preliminar",
+    "JECRIM",
+    "Lei 9.099/95",
+    "TCO",
+    "transação penal"
+  ],
+  "descricao": "Modelo de despacho inicial em Termo Circunstanciado de Ocorrência (TCO), no rito dos Juizados Especiais Criminais. Tem dois blocos condicionais, dos quais se usa exatamente um: 'determinacoes_sem_proposta_mp' quando os autos do TCO chegam sem proposta de transação penal do Ministério Público (só vista ao MP e conclusos, sem designação de audiência, sem intimações e sem bloco do QR Code); 'determinacoes_e_intimacoes' quando já houver proposta do MP nos autos (audiência designada neste ato, data em branco, e bloco do QR Code após a assinatura no .html).",
+  "titulo": "DESIGNAÇÃO DE AUDIÊNCIA PRELIMINAR (JECRIM)",
+  "instrucao_llm": "Gerar decisão judicial com base nos blocos a seguir. Blocos 'fixo' devem ser reproduzidos literalmente. Blocos 'adaptavel' devem ser usados como base, e o conteúdo adaptado ao caso concreto. Blocos 'fixo_condicional': usar exatamente um, conforme a 'condicao', reproduzido literalmente.",
+  "estrutura_decisao": [
+    {
+      "tipo": "adaptavel",
+      "identificador": "relatorio_identificacao",
+      "conteudo_base": "Trata-se de Termo Circunstanciado de Ocorrência (TCO) lavrado em desfavor do(a) Autor(a) do Fato, {NOME_AUTOR_FATO}, devidamente qualificado(a) nos autos, pela suposta prática da infração penal de menor potencial ofensivo."
+    },
+    {
+      "tipo": "fixo",
+      "identificador": "fundamentacao_rito_jecrim",
+      "conteudo": "O presente TCO foi encaminhado a este Juízo pela Autoridade Policial, acompanhado das peças informativas pertinentes.\n\nEm análise preliminar, verifico que o fato noticiado se amolda, em tese, a uma infração de menor potencial ofensivo, conforme definição do art. 61 da Lei n. 9.099/1995.\n\nA fase inaugural do procedimento nos Juizados Especiais Criminais visa, primordialmente, à conciliação e, sendo o caso, à transação penal, nos termos dos artigos 72 e 76 da Lei n. 9.099/1995. Para tanto, é indispensável a designação de audiência preliminar, na qual as partes envolvidas terão a oportunidade de buscar uma solução consensual para o conflito."
+    },
+    {
+      "tipo": "fixo_condicional",
+      "identificador": "determinacoes_sem_proposta_mp",
+      "condicao": "Usar quando os autos do TCO chegarem sem proposta de transação penal do Ministério Público. Não designa audiência, não intima as partes e não leva o bloco do QR Code.",
+      "conteudo": "Abra-se vista ao Ministério Público para manifestação e oferecimento de proposta de transação penal. Após a apresentação da proposta, ou não havendo proposta, voltem-me os autos conclusos.\n\nDiligências e intimações necessárias."
+    },
+    {
+      "tipo": "fixo_condicional",
+      "identificador": "determinacoes_e_intimacoes",
+      "conteudo": "Diante do exposto, e com fundamento nos artigos 69 e seguintes da Lei n. 9.099/1995, designo audiência preliminar para o dia __/__/____, às __h__, oportunidade para composição civil das partes e, sendo infrutífera, transação penal.\n\nAbra-se vista ao Ministério Público para manifestação e oferecimento de proposta de transação penal. Após a apresentação da proposta, ou não havendo proposta, voltem-me os autos conclusos.\n\nIntime-se o(a) autor(a) do fato, no endereço constante nos autos, para comparecer à audiência designada, devendo estar acompanhado(a) de advogado(a). Na intimação, deverá constar a advertência de que, caso não possua condições de constituir um(a) defensor(a), ser-lhe-á nomeado(a) Defensor(a) Público(a) ou dativo(a) para o ato. Informe-se, ainda, que seu comparecimento é fundamental para que possa se beneficiar das medidas despenalizadoras previstas na Lei n. 9.099/1995, e que a ausência injustificada poderá ensejar o prosseguimento do feito com o encaminhamento dos autos ao Ministério Público para análise de eventual oferecimento de denúncia.\n\nIntime-se também a(s) vítima(s), se houver e for identificada, no endereço constante nos autos, para comparecer à audiência, cientificando-a(s) da possibilidade de composição dos danos civis e, se o caso de infração penal de ação penal pública condicionada à representação ou de ação penal privada, do direito de oferecer representação ou queixa-crime, e do respectivo prazo decadencial.\n\nDê-se ciência ao Ministério Público e à Defensoria Pública.\n\nDiligências e intimações necessárias.",
+      "condicao": "Usar quando já houver proposta de transação penal do Ministério Público nos autos."
+    },
+    {
+      "tipo": "adaptavel",
+      "identificador": "fecho_assinatura",
+      "conteudo_base": "{LOCALIDADE}, data da assinatura eletrônica.\n\n**Lucas Tavares Coutinho**\nJuiz de Direito"
+    }
+  ]
+}
+```
