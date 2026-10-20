@@ -68,9 +68,12 @@
       "designação de audiência",
       "réu preso",
       "manutenção da prisão",
-      "art. 316 cpp"
+      "art. 316 cpp",
+      "rol de testemunhas",
+      "preclusão",
+      "art. 396-a cpp"
     ],
-    "descricao": "Modelo de decisão proferida após a resposta à acusação, que afasta a absolvição sumária, designa audiência de instrução e, em caso de réu preso, reavalia e mantém a custódia cautelar."
+    "descricao": "Modelo de decisão proferida após a resposta à acusação, que afasta a absolvição sumária, designa audiência de instrução, indefere, quando pedido, o arrolamento posterior de testemunhas ou sua apresentação em audiência (art. 396-A do CPP) e, em caso de réu preso, reavalia e mantém a custódia cautelar."
   },
   {
     "filename": "DECISAO_RECEBIMENTO_RESPOSTA_ACUSACAO_REJEITA_PRELIMINAR_DETERMINAR_DESIGNACAO_AUDIENCIA.md",
